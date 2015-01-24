@@ -1,0 +1,21 @@
+/*
+ *= require responsive-nav
+ */
+@charset "utf-8";
+
+@import "bourbon";
+@import "base/base";
+@import "neat";
+
+$base-color: #C05D5F;
+$desktop: new-breakpoint(min-width 768px);
+$desktop: new-breakpoint(min-width 768px);
+
+
+.nav-toggle {
+  float: right;
+}
+
+.nav-collapse {
+  float: right;
+}
