@@ -1,7 +1,7 @@
 // Typography
 $sans-serif: $helvetica;
-$serif: $georgia;
-$base-font-family: $sans-serif;
+$serif: 'Gentium Basic', $georgia;
+$base-font-family: 'Source Sans Pro', $sans-serif;
 $header-font-family: $base-font-family;
 
 // Font Sizes
@@ -30,13 +30,14 @@ $light-gray: #DDD;
 $light-red: #FBE3E4;
 $light-yellow: #FFF6BF;
 $light-green: #E6EFC2;
+$base-color: #C05D5F;
 
 // Background Color
 $base-background-color: white;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $blue;
+$base-accent-color: $base-color;
 
 // Link Colors
 $base-link-color: $base-accent-color;

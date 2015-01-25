@@ -1,5 +1,6 @@
 /*
  *= require responsive-nav
+ += require ionicons
  */
 @charset "utf-8";
 
@@ -11,11 +12,366 @@ $base-color: #C05D5F;
 $desktop: new-breakpoint(min-width 768px);
 $desktop: new-breakpoint(min-width 768px);
 
+$navigation-height: 60px;
+
+/* GLOBALS */
+body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e5e5e5;
+}
+
+.container {
+  @include outer-container();
+}
+
+.row {
+  @include row();
+}
+
+
+
+
+.full-width {
+  @include fill-parent();
+  //@include row();
+}
+
+/* END GLOBALS */
+
+/* SHARED */
+
+
+/* END SHARED*/
+
+
+/* NAVIGATION ITEMS */
+.no-background {
+  width: auto;
+  height: auto;
+}
+
+.full-menu-background {
+  width: 100%;
+  height: 100%;
+}
+
+.branding {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: $base-color;
+  //color: #fff;
+  font-size: 36px;
+  height: $navigation-height;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+  &.background-active {
+    //height: $navigation-height;
+  }
+  .branding-logo {
+    vertical-align: middle;
+  }
+}
+
+#navigation-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: $navigation-height;
+  background: #fff;
+  z-index: 9999;
+
+  //@include transition(all 0.5 ease-in-out);
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  float: right;
+
+  &.background-active {
+    background: $base-color;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include media($desktop) {
+    position: relative;
+  }
+}
+
+#navigation-area {
+  position: relative;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  //padding: 16px;
+  //@include transition(all 0.5 ease-in);
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  @include transform-origin(right top);
+  float: right;
+  &.background-active {
+    z-index: 9999;
+    background-color: $base-color;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+  }
+}
 
 .nav-toggle {
+  //float: right;
+  position: relative;
+  top: 0;
+  right: 0;
   float: right;
+  background-color: $base-color;
+  padding: 16px;
+  font-color: #fff;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  @include transition-delay(0.25s);
+  text-align: right;
+  height: 100%;
+  &.active {
+    height: 60px;
+    //text-align: right;
+    //float: none;
+  }
+
+  color: #fff;
+
+
 }
 
 .nav-collapse {
+  position: relative;
+  clear: right;
   float: right;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  @include transform(top right);
+  //@include transition-delay(0.25s);
+
+  a {
+   color: #e5e5e5;
+  }
+
+  &.opened {
+    float: none;
+    opacity: 1;
+  }
+
+  &.closed {
+    opacity: 0;
+
+    @include media($desktop) {
+      opacity: 1;
+    }
+  }
 }
+
+/* END NAVIGATION */
+
+/* HEADER AREA */
+.introduction-area {
+  padding-top: 60px;
+  height: 600px;
+  position: relative;
+  @include background(url("/images/snow-slush.png"));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  &::before {
+
+  }
+}
+
+.hello-text {
+  //font-variant: small-caps;
+}
+
+.header-box {
+}
+
+.header-text {
+  position: relative;
+
+  @include span-columns(10);
+  @include pad(12px);
+  margin-top: 125px;
+
+  @include media($desktop) {
+    @include span-columns(5);
+    @include pad(0);
+  }
+}
+
+.hello-text {
+
+  font-weight: 300;
+  font-size: 16px;
+
+  @include media($desktop) {
+    font-size: 16px;
+  }
+}
+
+.full-name {
+  font-size: 36px;
+  font-weight: 900;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.personal-description {
+
+  font-weight: 300;
+  font-size: 24px;
+  @include media($desktop) {
+    font-size: 30px;
+  }
+}
+
+.divider {
+  width: 75%;
+  text-align: center;
+  opacity: 0.75;
+}
+
+
+/* END HEADER AREA */
+
+
+.home-area {
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.area-heading {
+  position: relative;
+  display: block;
+  font-variant: small-caps;
+  color: #4A4A4A;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 40px 0;
+  margin: 0 auto;
+  //padding-bottom: 40px;
+}
+
+.recent-posts {
+  background: #e5e5e5;
+  padding: 20px 0;
+  display: block;
+}
+
+.row-table {
+  @include row(table);
+}
+
+.full-width-table {
+  @include media($desktop) {
+    @include fill-parent();
+    @include row(table);
+  }
+  // display: block;
+
+}
+
+.container-full {
+  @include outer-container();
+
+  @include media($desktop) {
+    @include outer-container(100%);
+  }
+}
+/* @include reset-display;
+ */
+.placeholder-box-projects {
+  background-color: $base-color;
+  height: 400px;
+  margin-bottom: 16px;
+
+  @include media($desktop) {
+    @include span-columns(4);
+  }
+
+  @include reset-display;
+}
+
+
+.reset-disp {
+  @include reset-display;
+}
+
+.placeholder-box {
+  @include span-columns(12);
+  background-color: $base-color;
+  height: 400px;
+  margin-bottom: 16px;
+
+  @include media($desktop) {
+    @include span-columns(4);
+  }
+}
+
+@include reset-display;
+
+.reset {
+  @include reset-display;
+}
+.circle-button {
+  border-radius: 16px;
+  padding: 16px;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.push-button {
+  display: block;
+}
+.lg-button {
+  @include reset-display;
+  @include media($desktop) {
+    @include span-columns(4);
+    @include shift(4);
+  }
+
+}
+
+.push-button {
+  margin-top: 20px;
+}
+
+.latest-projects {
+  background: #e5e5e5;
+  //padding: 20px 0;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.project-items {
+  margin-bottom: 20px;
+}
+
+
+/* @include reset-display;
+ */

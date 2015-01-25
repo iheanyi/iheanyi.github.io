@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no,minimal-ui" />
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" >
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Iheanyi Ekechukwu" %></title>
-
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900|Gentium+Basic:400,700,400italic' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "normalize", "all" %>
     <%= javascript_include_tag  "all" %>
   </head>
@@ -19,7 +19,42 @@
 
 
     <script>
-      var nav = responsiveNav(".nav-collapse");
+      var navigationHeader = $("#navigation-header");
+      var navArea = $("#navigation-area");
+      var brandingArea = $("#branding-area");
+
+      var nav = responsiveNav(".nav-collapse", {
+        animate: false,
+        open: function() {
+          console.log("Open called!");
+          navigationHeader.toggleClass("background-active");
+          navArea.toggleClass("background-active");
+          brandingArea.toggleClass("background-active");
+        },
+        close: function() {
+          console.log("Close called!");
+          navigationHeader.toggleClass("background-active");
+          navArea.toggleClass("background-active");
+          brandingArea.toggleClass("background-active");
+        }
+      });
+
+
+
+
+      /*var open = document.getElementById("open");
+      open.addEventListener("click", function(e) {
+        e.preventDefault();
+        nav.open();
+        console.log("Open clicked!");
+      }, false);
+
+      var close = document.getElementById("close");
+      close.addEventListener("click", function(e) {
+        e.preventDefault();
+        nav.close();
+        console.log("Close clicked!");
+      });*/
     </script>
   </body>
 </html>
