@@ -314,6 +314,24 @@ body {
     @include span-columns(4);
   }
 
+  &:nth-of-type(1) {
+    @include background(url("/images/NDSearchFull.png"));
+    background-position: top center;
+    background-repeat: no-repeat;
+    //background-size: cover;
+  }
+
+  &:nth-of-type(2) {
+    @include background(url("/images/pageunliker.png"));
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &:nth-of-type(3) {
+    @include background(url("/images/ImbalancedPicture.jpg"));
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
   @include reset-display;
 }
 
@@ -327,6 +345,7 @@ body {
   background-color: $base-color;
   height: 400px;
   margin-bottom: 16px;
+
 
   @include media($desktop) {
     @include span-columns(4);
@@ -373,5 +392,42 @@ body {
 }
 
 
+.footer {
+  height: 150px;
+  background-color: #4A4A4A;
+  line-height: 150px;
+  font-size: 16px;
+  color: #fff;
+
+  .copyright {
+    @include span-columns(10);
+    @include shift(1);
+    @include omega();
+    @include media($desktop) {
+      @include shift(0);
+      @include span-columns(6);
+    }
+
+  /*   &::after {
+      line-height: 8px;
+      height: 0;
+    } */
+  }
+}
+
+.social-media-list {
+  @include span-columns(10);
+  @include shift(1);
+  list-style: none;
+
+  @include media($desktop) {
+    @include span-columns(6);
+    @include shift(0);
+  }
+  li {
+    margin-left: 0;
+    display: inline-block;
+  }
+}
 /* @include reset-display;
  */
