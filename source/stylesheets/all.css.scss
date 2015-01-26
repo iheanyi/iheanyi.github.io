@@ -9,7 +9,8 @@
 @import "neat";
 
 $base-color: #C05D5F;
-$desktop: new-breakpoint(min-width 768px);
+$dark-color: #4a4a4a;
+$tablet: new-breakpoint(min-width 640px);
 $desktop: new-breakpoint(min-width 768px);
 
 $navigation-height: 60px;
@@ -76,6 +77,11 @@ body {
   width: 50px;
   text-align: center;
   vertical-align: middle;
+
+  @include media($desktop) {
+    float: left;
+    text-align: left;
+  }
   &.background-active {
     //height: $navigation-height;
   }
@@ -100,9 +106,10 @@ body {
   float: right;
 
   &.background-active {
-    background: $base-color;
+    background: transparent;
     width: 100%;
     height: 100%;
+    //opacity: 0.75;
   }
 
   @include media($desktop) {
@@ -125,10 +132,16 @@ body {
   float: right;
   &.background-active {
     z-index: 9999;
-    background-color: $base-color;
+    background-color: rgba(192,93,95,0.75);
     width: 100%;
     text-align: center;
     height: 100%;
+  }
+
+  @include media($desktop) {
+    float: none;
+    @include reset-display;
+    @include outer-container();
   }
 }
 
@@ -144,11 +157,46 @@ body {
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
-  @include transition-delay(0.25s);
+  //@include transition-delay(0.25s);
   text-align: right;
-  height: 100%;
+  height: $navigation-height;
+
+  &:before {
+    content: '\f20e';
+    font-family: ionicons, "ionicons";
+    padding-right: 8px;
+    -webkit-transition: content 0.5s;
+    transition: content 0.5s;
+  }
+
+  &:after {
+    content: 'Menu';
+    -webkit-transition: content 0.5s;
+    transition: content 0.5s;
+    padding-right: 8px;
+  }
+
   &.active {
-    height: 60px;
+    height: $navigation-height;
+    background: transparent;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+    &:before {
+      content: '\f2d7';
+      font-family: ionicons;
+      -webkit-transition: content 0.5s;
+      transition: content 0.5s;
+      padding-right: 8px;
+    }
+
+    &:after {
+      content: 'Close';
+      -webkit-transition: content 0.5s;
+      transition: content 0.5s;
+      padding-right: 8px;
+    }
+
     //text-align: right;
     //float: none;
   }
@@ -165,23 +213,90 @@ body {
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
+  height: 100%;
   @include transform(top right);
+  @include transform(translate3d(0,40%,0));
   //@include transition-delay(0.25s);
 
-  a {
-   color: #e5e5e5;
+  @include media($desktop) {
+    float: none;
+    @include outer-container();
   }
+  ul.navigation-items {
+    float: right;
+    @include transition(all 0.35s);
+
+    @include media($desktop) {
+      @include outer-container();
+      text-align: right;
+    }
+    li {
+      margin-bottom: 20px;
+
+      @include media($desktop) {
+        display: inline;
+        line-height: $navigation-height;
+        margin-right: 16px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+
+      a {
+        color: #fff;
+        font-size: 2em;
+        font-weight: 900;
+        text-transform: uppercase;
+        //padding-bottom: 60px;
+        //margin: 80px 0;
+
+        @include media($desktop) {
+          font-size: 100%;
+          text-transform: none;
+          font-weight: 600;
+          color: #4A4a4a;
+        }
+
+        &:hover {
+          color: $base-color;
+          border-bottom: 1px dotted $base-color;
+        }
+
+        &.active {
+          color: $base-color;
+        }
+      }
+    }
+}
 
   &.opened {
     float: none;
-    opacity: 1;
+    //opacity: 1;
+
+    ul.navigation-items {
+      opacity: 1;
+      @include transition(all 0.35s);
+      @include transform(scale(1));
+    }
   }
 
   &.closed {
-    opacity: 0;
+    ul.navigation-items {
+      opacity: 0;
+      @include transition(all 0.35s);
+      @include transform(scale(0));
+
+      @include media($desktop) {
+        opacity: 1;
+        @include transform(scale(1));
+      }
+    }
 
     @include media($desktop) {
       opacity: 1;
+      @include transform(scale(1));
     }
   }
 }
@@ -190,7 +305,7 @@ body {
 
 /* HEADER AREA */
 .introduction-area {
-  padding-top: 60px;
+  padding-top: $navigation-height;
   height: 600px;
   position: relative;
   @include background(url("/images/snow-slush.png"));
@@ -306,7 +421,8 @@ body {
 /* @include reset-display;
  */
 .placeholder-box-projects {
-  background-color: $base-color;
+  //background-color: $base-color;
+  background-color: #fff;
   height: 400px;
   margin-bottom: 16px;
 
@@ -314,24 +430,6 @@ body {
     @include span-columns(4);
   }
 
-  &:nth-of-type(1) {
-    @include background(url("/images/NDSearchFull.png"));
-    background-position: top center;
-    background-repeat: no-repeat;
-    //background-size: cover;
-  }
-
-  &:nth-of-type(2) {
-    @include background(url("/images/pageunliker.png"));
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
-  &:nth-of-type(3) {
-    @include background(url("/images/ImbalancedPicture.jpg"));
-    background-position: top center;
-    background-repeat: no-repeat;
-  }
   @include reset-display;
 }
 
@@ -357,11 +455,29 @@ body {
 .reset {
   @include reset-display;
 }
-.circle-button {
+.accent {
+  color: $base-color;
+}
+
+button.circle-button {
   border-radius: 16px;
   padding: 16px;
   text-transform: uppercase;
-  margin: 0 auto;
+  //margin: 0 auto;
+  @include transition(all 0.5s);
+
+  &:after {
+    @include transition(all 0.5s);
+    opacity: 0;
+  }
+  &:hover{
+
+/*      &::after  {
+       content: " >>";
+       opacity: 1;
+     } */
+
+  }
 }
 
 .push-button {
@@ -388,9 +504,149 @@ body {
 }
 
 .project-items {
+  @include fill-parent();
+  @include row(table);
+  position: relative;
+  list-style: none;
+  max-width: 100%;
   margin-bottom: 20px;
 }
 
+.project-items figure {
+  position: relative;
+  float: left;
+  margin: 0;
+  overflow: hidden;
+  max-height: 400px;
+  max-width: 100%;
+  cursor: pointer;
+  text-align: center;
+  background-color: $base-color;
+  margin-bottom: 20px;
+
+  @include media($desktop) {
+      @include span-columns(4);
+      margin: 0;
+  }
+}
+
+.project-items figure img {
+  position: relative;
+  //display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.project-items figure figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.project-items figure figcaption::before,
+.project-items figure figcaption::after {
+  pointer-events: none;
+}
+
+.project-items figure figcaption,
+.project-items figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-items figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+/* Tympanus Oscar Effect */
+/* http://tympanus.net/Development/HoverEffectIdeas/ */
+/* Source: https://github.com/codrops/HoverEffectIdeas/blob/master/css/set1.css */
+figure.effect-oscar {
+  //background: -webkit-linear-gradient(45deg, $base-color 0%, #9b4a1b 40%, #3a342a 100%);
+  //background: linear-gradient(45deg, #22682a 0%,#9b4a1b 40%,#3a342a 100%);
+  //background-color: $dark-color;
+  background-color: rgba(192,93,95,0.9);
+
+  img {
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+  }
+
+  figcaption {
+    padding: 3em;
+    //font-color: $dark-color;
+    //background-color: rgba(58,52,42,0.7);
+    //background-color: rgba(58,52,42,0.7);
+    background-color: rgba(192,93,95,0.7);
+
+    -webkit-transition: background-color 0.35s;
+    transition: background-color 0.35s;
+  }
+
+  figcaption::before {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 1px solid #fff;
+    content: '';
+  }
+
+  h2 {
+    margin: 20% 0 10px 0;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0, 90%,0);
+    transform: translate3d(0, 90%,0);
+    @include media($desktop) {
+      -webkit-transform: translate3d(0, -100%,0);
+      transform: translate3d(0, -100%,0);
+    }
+
+  }
+
+  figcaption::before, p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  &:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  &:hover figcaption::before,
+  &:hover p {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  &:hover figcaption {
+    background-color: rgba(58,52,42,0);
+
+  }
+
+  &:hover img {
+    opacity: 0.4;
+  }
+}
 
 .footer {
   height: 150px;

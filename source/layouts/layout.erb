@@ -25,17 +25,26 @@
 
       var nav = responsiveNav(".nav-collapse", {
         animate: false,
+        label: "",
         open: function() {
           console.log("Open called!");
           navigationHeader.toggleClass("background-active");
           navArea.toggleClass("background-active");
           brandingArea.toggleClass("background-active");
+          $('html, body').css({
+              'overflow': 'hidden',
+              'height': '100%'
+          });
         },
         close: function() {
           console.log("Close called!");
           navigationHeader.toggleClass("background-active");
           navArea.toggleClass("background-active");
           brandingArea.toggleClass("background-active");
+          $('html, body').css({
+              'overflow': 'auto',
+              'height': 'auto'
+          });
         }
       });
 

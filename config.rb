@@ -55,6 +55,7 @@ set :images_dir, 'images'
 
 sprockets.append_path File.join root, 'bower_components'
 sprockets.import_asset 'responsive-nav'
+sprockets.import_asset 'ionicons'
 
 configure :development do
   activate :livereload, :port => '35730'
