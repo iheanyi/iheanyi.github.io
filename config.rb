@@ -97,6 +97,7 @@ end
 # Nested Layouts for Projects and Blog Pages
 page "blog/*",  :layout => :blog_layout
 page "projects/*", :layout => :projects_layout
+page "CNAME", :layout => false
 
 activate :directory_indexes
 

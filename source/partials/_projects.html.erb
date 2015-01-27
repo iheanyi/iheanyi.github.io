@@ -5,9 +5,12 @@
 <div class="projects-area">
   <div class="container-full">
     <div class="row">
-        <span class="page-heading">projects</span>
 
-        <p class="page-paragraph-text">In my free time, I enjoy building beautiful, user-friendly applications, whether for myself or others.</p>
+        <div class="projects-page-heading">
+          <span class="page-heading">projects</span>
+
+          <p class="page-paragraph-text">In my free time, I enjoy building beautiful, user-friendly applications, whether for myself or others.</p>
+        </div>
     </div>
 
     <div class="row">
@@ -16,8 +19,7 @@
           <div class="full-width-table project-items">
               <% blog("projects").articles.each do |article| %>
                 <figure class="effect-oscar placeholder-box-projects">
-<!--                   <img src="" alt="">
- -->                  <%= image_tag(article.data.cover_photo) %>
+                 <%= image_tag(article.data.cover_photo) %>
 
                   <figcaption>
                     <h2><%=article.title %></h2>
@@ -30,8 +32,6 @@
               <% end %>
             </div>
 
-          </div>
-
           <div class="reset-disp"></div>
         </div>
 
@@ -41,3 +41,4 @@
       </div>
     </div>
   </div>
+</div>
