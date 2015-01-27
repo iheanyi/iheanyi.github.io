@@ -349,10 +349,10 @@ body {
 }
 
 .full-name {
-  font-size: 36px;
+  font-size: 2.5em;
   font-weight: 900;
   width: 100%;
-  white-space: nowrap;
+  //white-space: nowrap;
 }
 
 .personal-description {
@@ -380,10 +380,16 @@ body {
   width: 100%;
 }
 
+.about-area {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
 .area-heading {
   position: relative;
   display: block;
   font-variant: small-caps;
+  font-size: 1.25em;
   color: #4A4A4A;
   font-weight: 600;
   font-size: 20px;
@@ -685,5 +691,133 @@ figure.effect-oscar {
     display: inline-block;
   }
 }
-/* @include reset-display;
- */
+
+.banner-header {
+  position: relative;
+  @include background(linear-gradient(rgba(39,54, 60, 0.8), rgba(39,54, 60, 0.8)), url("/images/doubleme.jpg"));
+  background-blend-mode: overlay, multiply;
+  background-size: cover;
+  background-position: center center;
+  height: 200px;
+  width: 100%;
+
+  @include media($desktop) {
+    height: 400px;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    //background-color: rgba(39,54, 60, 0.5);
+    @include filter(contrast(50%));
+
+  }
+}
+
+.left-section {
+  display: none;
+  text-align: right;
+  @include media($desktop) {
+    @include reset-display;
+    @include span-columns(4);
+    //display: initial;
+  }
+
+  ul {
+    font-family: 'Gentium Basic', Georgia, serif;
+    font-size: 1.25em;
+
+    li > a {
+      color: $base-color;
+      font-weight: 600;
+
+      &:hover {
+        $accent: darken($base-color, 10%);
+        color: $accent;
+        border-bottom: 1px $accent dotted;
+      }
+    }
+  }
+
+
+}
+
+.time-section, .company-section {
+  font-family: 'Gentium Basic', Georgia, serif;
+  //font-size: 1.1em;
+}
+
+.time-section {
+  text-align: right;
+  @include span-columns(6);
+
+  @include media($desktop) {
+    text-align: left;
+    @include span-columns(4);
+    //@include shift(-1);
+  }
+}
+
+.company-section {
+  text-align: left;
+  @include span-columns(6);
+
+  @include media($desktop) {
+    @include span-columns(8);
+  }
+}
+
+.exp {
+  padding-bottom: 8px;
+  font-size: 1.25em;
+}
+
+.push-down {
+  padding-top: 15px;
+}
+.page-heading {
+    position: relative;
+    display: block;
+    //font-variant: small-caps;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #4A4A4A;
+    font-weight: 600;
+    font-size: 20px;
+    //padding: 40px 0;
+    margin: 0 auto;
+    //padding-bottom: 40px;
+}
+
+.emphasis {
+  font-weight: 700;
+}
+.right-section {
+  @include pad();
+  @include span-columns(12);
+
+  @include media($desktop) {
+    @include pad(0);
+    @include span-columns(8);
+  }
+
+  .row > ul,p {
+    font-family: 'Gentium Basic', Georgia, serif;
+    font-size: 1.25em;
+  }
+
+
+  a {
+    color: $base-color;
+    font-weight: 700;
+
+    &:hover {
+      $accent: darken($base-color, 10%);
+      color: $accent;
+      border-bottom: 1px $accent dotted;
+      //font-weight: 700;
+    }
+  }
+}
