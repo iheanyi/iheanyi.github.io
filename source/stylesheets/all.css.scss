@@ -352,7 +352,6 @@ body {
   font-size: 2.5em;
   font-weight: 900;
   width: 100%;
-  //white-space: nowrap;
 }
 
 .personal-description {
@@ -694,7 +693,7 @@ figure.effect-oscar {
 
 .banner-header {
   position: relative;
-  @include background(linear-gradient(rgba(39,54, 60, 0.8), rgba(39,54, 60, 0.8)), url("/images/doubleme.jpg"));
+  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("/images/doubleme.jpg"));
   background-blend-mode: overlay, multiply;
   background-size: cover;
   background-position: center center;
