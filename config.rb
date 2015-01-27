@@ -67,6 +67,20 @@ configure :build do
   activate :relative_assets
 end
 
+activate :blog do |blog|
+  blog.prefix = "projects"
+  blog.permalink = "{title}.html"
+  blog.sources = "{title}.html"
+  blog.layout = "projects_layout"
+end
+
+activate :blog do |blog|
+  blog.prefix = "blog"
+  blog.permalink = "{title}.html"
+  blog.sources = "{title}.html"
+  blog.layout = "blog_layout"
+end
+
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.build_before = true
@@ -78,8 +92,11 @@ activate :deploy do |deploy|
   # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
 
-activate :directory_indexes
+# Nested Layouts for Projects and Blog Pages
+page "blog/*",  :layout => :blog_layout
+page "projects/*", :layout => :projects_layout
 
+activate :directory_indexes
 
 # Build-specific configuration
 configure :build do

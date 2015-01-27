@@ -14,10 +14,11 @@
   </head>
 
   <body class="<%= page_classes %>">
+    <%= partial "partials/navigation" %>
     <%= yield %>
 
 
-
+    <%= partial "partials/footer" %>
     <script>
       var navigationHeader = $("#navigation-header");
       var navArea = $("#navigation-area");

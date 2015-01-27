@@ -28,6 +28,7 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 
 body {
   background: #e5e5e5;
+  min-height: 100%;
 }
 
 .container {
@@ -87,6 +88,8 @@ body {
   }
   .branding-logo {
     vertical-align: middle;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -184,7 +187,7 @@ body {
     transition: all 0.5s ease-in;
     &:before {
       content: '\f2d7';
-      font-family: ionicons;
+      font-family: 'ionicons';
       -webkit-transition: content 0.5s;
       transition: content 0.5s;
       padding-right: 8px;
@@ -215,7 +218,7 @@ body {
   transition: all 0.5s ease-in;
   height: 100%;
   @include transform(top right);
-  @include transform(translate3d(0,40%,0));
+  @include transform(translate3d(0,10%,0));
   //@include transition-delay(0.25s);
 
   @include media($desktop) {
@@ -691,28 +694,51 @@ figure.effect-oscar {
   }
 }
 
-.banner-header {
-  position: relative;
+#element::-webkit-scrollbar {
+    display: none;
+}
+
+.about-header-image {
   @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/doubleme.jpg"));
   background-blend-mode: overlay, multiply;
   background-size: cover;
   background-position: center center;
+}
+
+.page-paragraph-text {
+  font-family: "Gentium Basic", Georgia, serif;
+}
+
+.projects-area {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 1.25em;
+}
+
+.projects-header-image {
+  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/doubleme.jpg"));
+  background-blend-mode: overlay, multiply;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner-header {
+  position: relative;
   height: 200px;
   width: 100%;
 
   @include media($desktop) {
     height: 400px;
   }
-  &::after {
+
+/*   &::after {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     //background-color: rgba(39,54, 60, 0.5);
-    @include filter(contrast(50%));
-
-  }
+  } */
 }
 
 .left-section {
