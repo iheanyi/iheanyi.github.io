@@ -550,7 +550,7 @@ button.circle-button {
   padding: 2em;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.25em;
+  font-size: 1em;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -617,9 +617,11 @@ figure.effect-oscar {
     margin: 20% 0 10px 0;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
-    -webkit-transform: translate3d(0, 90%,0);
-    transform: translate3d(0, 90%,0);
+    -webkit-transform: translate3d(0, 100%,0);
+    transform: translate3d(0, 100%,0);
+    font-size: 1.25em;
     @include media($desktop) {
+      font-size: 1em;
       -webkit-transform: translate3d(0, -100%,0);
       transform: translate3d(0, -100%,0);
     }
