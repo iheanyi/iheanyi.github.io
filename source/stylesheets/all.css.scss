@@ -617,11 +617,11 @@ figure.effect-oscar {
     margin: 20% 0 10px 0;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
-    -webkit-transform: translate3d(0, 100%,0);
-    transform: translate3d(0, 100%,0);
-    font-size: 1.25em;
+    -webkit-transform: translate3d(0, 90%,0);
+    transform: translate3d(0, 90%,0);
+    //font-size: 1.25em;
     @include media($desktop) {
-      font-size: 1em;
+      //font-size: 2.5em;
       -webkit-transform: translate3d(0, -100%,0);
       transform: translate3d(0, -100%,0);
     }

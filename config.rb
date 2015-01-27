@@ -68,6 +68,7 @@ configure :build do
 end
 
 activate :blog do |blog|
+  blog.name = "projects"
   blog.prefix = "projects"
   blog.permalink = "{title}.html"
   blog.sources = "{title}.html"
@@ -76,7 +77,8 @@ end
 
 activate :blog do |blog|
   blog.prefix = "blog"
-  blog.permalink = "{title}.html"
+  blog.name = "blog"
+  blog.permalink = "blog/{title}.html"
   blog.sources = "{title}.html"
   blog.layout = "blog_layout"
 end

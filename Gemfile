@@ -8,6 +8,7 @@ gem "middleman-blog"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
+gem 'nokogiri'
 
 gem 'bitters'
 gem 'bourbon'
