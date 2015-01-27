@@ -98,6 +98,7 @@ end
 page "blog/*",  :layout => :blog_layout
 page "projects/*", :layout => :projects_layout
 page "CNAME", :layout => false
+set :relative_links, true
 
 activate :directory_indexes
 
