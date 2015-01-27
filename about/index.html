@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no,minimal-ui" />
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" >
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Iheanyi Ekechukwu | About</title>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900|Gentium+Basic:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body class="about about_index">
+    <div id="navigation-header" class="navigation no-background">
+  <div id="navigation-area" class="">
+    <div id="branding-area" class="branding">
+      <a href="#" class="branding-logo">I</a>
+    </div>
+
+    <nav class="nav-collapse">
+        <ul class="navigation-items">
+            <li><a href="/about/">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#writings">Writings</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="banner-header">
+
+</div>
+
+<div class="about-area">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="left-section">
+        <div class="row">
+          <span class="page-heading">On the Web</span>
+          <ul class="about-links">
+            <li><a href="http://twitter.com">Twitter</a></li>
+            <li><a href="mailto:iekechukwu@gmail.com">Email</a></li>
+            <li><a href="http://github.com/iheanyi">GitHub</a></li>
+            <li><a href="http://dribbble.com/iheanyi">Dribbble</a></li>
+            <li><a href="http://linkedin.com/in/iheanyi">LinkedIn</a></li>
+
+          </ul>
+        </div>
+
+        <div class="row services push-down">
+
+          <span class="page-heading">available services</span>
+          <ul>
+            <li>Web Design</li>
+            <li>Web Development (Rails, EmberJS)</li>
+            <li>Consulting</li>
+            <li>UI Design</li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <div class="right-section">
+
+          <div class="row">
+            <span class="page-heading">about me</span>
+
+            <p>
+              Hello, I'm Iheanyi Ekechukwu. I'm a developer and designer originally from Myrtle Beach, South Carolina. In December of 2014, I graduated from the University of Notre Dame with two degrees, a B.S. in Computer Science and a B.A. in Design. From University, I learned that I had a passion for developing functional, user-friendly digital solutions to various problems. I currently am working at <span class="accent">IBM Watson Innovation Labs</span> in Austin, Texas as a Software Developer.
+            </p>
+
+            <p>
+              While my stack of choice is Ruby on Rails with EmberJS, I pride myself on my ability to quickly learn the languages, tools, and/or frameworks best for solving a problem. When I'm not coding or designing, you can usually find me bboying, grabbing a cup of coffee at a local coffeeshop, or bingewatching a show on Netflix.
+            </p>
+
+            <p>
+              I'm currently available for some freelance work, so if I can be of service to you, please do not hesitate to <a href="mailto:iekechukwu@gmail.com">contact me</a>.
+            </p>
+          </div>
+
+          <div class="row push-down">
+            <span class="page-heading">experience</span>
+
+
+            <div class="row exp">
+              <div class="time-section">Feb 2014 – now</div>
+              <div class="company-section">
+                <div class="row accent">IBM Watson Innovation Labs</div>
+                <div class="row emphasis">Software Developer</div>
+              </div>
+            </div>
+
+            <div class="row exp">
+              <div class="time-section">Feb 2013 – Dec 2014</div>
+              <div class="company-section">
+                <div class="row accent ">iCeNSA</div>
+                <div class="row emphasis">Research Assistant</div>
+              </div>
+            </div>
+
+            <div class="row exp">
+              <div class="time-section">May 2014 – Aug 2014, May 2013 – Aug 2013</div>
+              <div class="company-section">
+                <div class="row accent ">IBM</div>
+                <div class="row emphasis">Intern</div>
+              </div>
+            </div>
+
+            <div class="row exp">
+              <div class="time-section">Jan 2012 – Dec 2012</div>
+              <div class="company-section">
+                <div class="row accent">CCL</div>
+                <div class="row emphasis">Research Assistant</div>
+
+              </div>
+            </div>
+
+            <div class="row exp">
+              <div class="time-section">May 2011 – Aug 2011</div>
+              <div class="company-section">
+                <div class="row accent">NDNano</div>
+                <div class="row emphasis">Research Assistant</div>
+
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="container">
+
+    <div class="row">
+      <span class="copyright"> <span class="accent">&copy;</span> 2015 Iheanyi Ekechukwu. </span>
+<!--
+      <ul class="social-media-list">
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+            <li>GitHub</li>
+            <li>Dribbble</li>
+        </ul> -->
+    </div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+    <script>
+      var navigationHeader = $("#navigation-header");
+      var navArea = $("#navigation-area");
+      var brandingArea = $("#branding-area");
+
+      var nav = responsiveNav(".nav-collapse", {
+        animate: false,
+        label: "",
+        open: function() {
+          console.log("Open called!");
+          navigationHeader.toggleClass("background-active");
+          navArea.toggleClass("background-active");
+          brandingArea.toggleClass("background-active");
+          $('html, body').css({
+              'overflow': 'hidden',
+              'height': '100%'
+          });
+        },
+        close: function() {
+          console.log("Close called!");
+          navigationHeader.toggleClass("background-active");
+          navArea.toggleClass("background-active");
+          brandingArea.toggleClass("background-active");
+          $('html, body').css({
+              'overflow': 'auto',
+              'height': 'auto'
+          });
+        }
+      });
+
+
+
+
+      /*var open = document.getElementById("open");
+      open.addEventListener("click", function(e) {
+        e.preventDefault();
+        nav.open();
+        console.log("Open clicked!");
+      }, false);
+
+      var close = document.getElementById("close");
+      close.addEventListener("click", function(e) {
+        e.preventDefault();
+        nav.close();
+        console.log("Close clicked!");
+      });*/
+    </script>
+  </body>
+</html>
