@@ -69,13 +69,13 @@ body {
 .branding {
   float: left;
   position: relative;
-  top: 0;
-  left: 0;
-  background-color: $base-color;
+  //background-color: $base-color;
   //color: #fff;
-  font-size: 36px;
+  font-size: 1.25em;
   height: $navigation-height;
-  width: 50px;
+  line-height: $navigation-height;
+  @include span-columns(6);
+  //width: 50px;
   text-align: center;
   vertical-align: middle;
 
