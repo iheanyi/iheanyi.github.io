@@ -308,7 +308,7 @@ body {
   padding-top: $navigation-height;
   height: 600px;
   position: relative;
-  @include background(url("/images/snow-slush.png"));
+  @include background(url("../images/snow-slush.png"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -693,7 +693,7 @@ figure.effect-oscar {
 
 .banner-header {
   position: relative;
-  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("/images/doubleme.jpg"));
+  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/doubleme.jpg"));
   background-blend-mode: overlay, multiply;
   background-size: cover;
   background-position: center center;
