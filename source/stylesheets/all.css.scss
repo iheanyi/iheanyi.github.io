@@ -120,6 +120,11 @@ body {
   }
 }
 
+.banner-image {
+  height: 200px;
+  background-color: #a5a5a5;
+}
+
 #navigation-area {
   position: relative;
   top: 0;
@@ -256,7 +261,7 @@ body {
         //margin: 80px 0;
 
         @include media($desktop) {
-          font-size: 100%;
+          font-size: 1em;
           text-transform: none;
           font-weight: 600;
           color: #4A4a4a;
@@ -720,6 +725,130 @@ figure.effect-oscar {
 
 .projects-page-heading {
   padding: 20px 0;
+}
+
+.post-area {
+  padding-bottom: 20px;
+}
+
+.article {
+  font-size: 1.25em;
+  font-family: "Gentium Basic", Georgia, serif;
+  color: #4A4A4A;
+}
+.center-text {
+  text-align: center;
+}
+
+.span-6-centered {
+}
+
+@include display-context(block);
+
+.span-6 {
+  @include span-columns(6);
+}
+
+.span-8-centered {
+  @include span-columns(8);
+  @include shift(2);
+}
+
+.project-content {
+  @include pad();
+
+  @include media($desktop) {
+    @include pad(0);
+  }
+}
+
+@include reset-display;
+
+.thumbnails {
+  @include span-columns(12);
+  padding-bottom: 30px;
+
+  @include media($desktop) {
+    @include span-columns(6);
+  }
+}
+
+.sans-font {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.hang-left {
+  @include span-columns(6);
+  text-align: left;
+  float: left;
+  font-weight: 600;
+  font-size: 1.1em;
+  @include media($desktop) {
+    font-size: 1.15em;
+  }
+}
+
+.next-prev-section {
+  @include pad();
+
+  @include media($desktop) {
+    @include span-columns(11);
+    @include pad(0);
+  }
+}
+
+.hang-right {
+  @include span-columns(6);
+  text-align: right;
+  float: right;
+  font-weight: 600;
+  font-size: 1.1em;
+
+  @include media($desktop) {
+    font-size: 1.15em;
+  }
+}
+.project-text {
+  @include media($desktop) {
+    @include span-columns(5);
+    //@include shift(3);
+  }
+}
+
+.project-description-text {
+  font-family: "Gentium Basic", Georgia, serif;
+  font-size: 1.25em;
+  color: #4a4a4a;
+}
+.header-content {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #4A4A4A;
+  margin: 0 auto;
+}
+
+.span-3 {
+  @include span-columns(3);
+}
+.project-title {
+  font-weight: 600;
+  font-size: 2em;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+
+  @include media($desktop) {
+    font-size: 2.25em;
+  }
+}
+
+
+.project-banner-image {
+  background-blend-mode: multiple;
+  background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat no-repeat;
 }
 
 .projects-header-image {

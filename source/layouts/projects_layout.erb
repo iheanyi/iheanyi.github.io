@@ -1,5 +1,51 @@
 <% wrap_layout :layout do %>
-  <article>
-    <%= yield %>
-  </article>
+  <div class="project-banner-image" style="width: 100%; background-position: center center; background-color: #e5e5e5; height: 300px; background-repeat: no-repeat; background-size: cover; background: linear-gradient(rgba(192, 93, 95, 0.9), rgba(192,93,95,0.5)), url('/images/<%=current_page.data.cover_photo %>')">
+  </div>
+
+  <div class="container post-area">
+        <div class="row">
+          <div class="header-content">
+            <span class="project-title"><%= current_article.title %></span>
+
+            <p class="project-description-text"><%= current_article.data.description %></p>
+          </div>
+        </div>
+      <div class="row project-content">
+          <div class="thumbnails">
+            <%= image_tag(current_article.data.cover_photo) %>
+          </div>
+
+          <div class="project-text article">
+
+            <span class="accent emphasis sans-font">Created in <%= current_article.date.year %></span>
+            <%= yield %>
+
+            <% if current_page.data.project_url %>
+              <a target="_blank" href="<%= current_article.data.project_url %>">View Project</a>
+            <% end %>
+          </div>
+    </div>
+
+    <div class="row next-prev-section">
+      <div class="container">
+        <div class="hang-left">
+          <% if current_article.next_article %>
+            <%= link_to "&laquo; Next Project: #{current_article.next_article.title} ", current_article.next_article.url %>
+          <% end %>
+        </div>
+
+        <div class="hang-right">
+          <% if current_article.previous_article %>
+            <%= link_to "#{current_article.previous_article.title}: Prev Project &raquo;", current_article.previous_article.url %>
+          <% end %>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
 <% end %>
