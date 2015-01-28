@@ -46,7 +46,7 @@
 #     "Helping"
 #   end
 # end
-
+require 'rouge'
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
@@ -56,8 +56,6 @@ set :images_dir, 'images'
 sprockets.append_path File.join root, 'bower_components'
 sprockets.import_asset 'responsive-nav'
 sprockets.import_asset 'ionicons'
-
-activate :syntax, :line_numbers => false, :inline_theme => "Monokai"
 
 configure :development do
   activate :livereload, :port => '35730'
@@ -128,4 +126,6 @@ end
 
 set :markdown_engine, :redcarpet
 set :markdown,  :fenced_code_blocks => true, :autolink => true, :smartypants => true
+
+activate :syntax, :line_numbers => false #, :inline_theme => "github"
 

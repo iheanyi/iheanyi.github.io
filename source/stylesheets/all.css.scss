@@ -7,9 +7,10 @@
 @import "bourbon";
 @import "base/base";
 @import "neat";
-@import "code";
-@import "zen";
-@import "lib/prettify";
+@import "prettify";
+//@import "code";
+//@import "zen";
+//@import "lib/prettify";
 
 $base-color: #C05D5F;
 $dark-color: #4a4a4a;
@@ -933,7 +934,7 @@ figure.effect-oscar {
 }
 
 .post-container {
-  padding-top: 40px;
+  padding-top: 80px;
   display: block;
 }
 .post-content-area {

@@ -1,23 +1,27 @@
 <% wrap_layout :layout do %>
 
-  <div class="container post-container">
 
-    <div class="post-content-area">
-      <div class="row">
-        <span class="post-title"><%= current_article.title %></span>
+  <div class="post-container">
+    <div class="container">
+
+      <div class="post-content-area">
+        <div class="row">
+          <span class="post-title"><%= current_article.title %></span>
+        </div>
+        <div class="row post-content">
+            <%= yield %>
+
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="kwuchu" data-size="large">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+            <hr>
+
+        </div>
       </div>
-      <div class="row post-content">
-          <%= yield %>
 
-          <a href="https://twitter.com/share" class="twitter-share-button" data-via="kwuchu" data-size="large">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-          <hr>
-
-      </div>
     </div>
-
-
   </div>
+
 
 <% end %>
