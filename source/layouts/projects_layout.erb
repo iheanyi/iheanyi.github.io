@@ -1,7 +1,9 @@
 <% wrap_layout :layout do %>
-  <div class="project-banner-image" style="width: 100%; background-position: center center; background-color: #e5e5e5; height: 300px; background-repeat: no-repeat; background-size: cover; background: linear-gradient(rgba(192, 93, 95, 0.9), rgba(192,93,95,0.5)), url('/images/<%=current_page.data.cover_photo %>')">
+ <!--  <div class="project-banner-image" style="width: 100%; background-position: center center; background-color: #e5e5e5; height: 300px; background-repeat: no-repeat; background-size: cover; background: linear-gradient(rgba(192, 93, 95, 0.9), rgba(192,93,95,0.5)), url('/images/<%=current_page.data.cover_photo %>')">
   </div>
+ -->
 
+ <div></div>
   <div class="container post-area">
         <div class="row">
           <div class="header-content">
@@ -25,26 +27,20 @@
             <% end %>
           </div>
     </div>
-
     <div class="row next-prev-section">
       <div class="container">
         <div class="hang-left">
           <% if current_article.next_article %>
-            <%= link_to "&laquo; Next Project: #{current_article.next_article.title} ", current_article.next_article.url, :relative => true %>
+            <%= link_to "&laquo; Next Project: #{current_article.next_article.title} ", current_article.next_article, :relative => true %>
           <% end %>
         </div>
 
         <div class="hang-right">
           <% if current_article.previous_article %>
-            <%= link_to "#{current_article.previous_article.title}: Prev Project &raquo;", current_article.previous_article.url, :relative => true %>
+            <%= link_to "#{current_article.previous_article.title}: Prev Project &raquo;", current_article.previous_article, :relative => true %>
           <% end %>
         </div>
       </div>
-
-
-
-
-
     </div>
   </div>
 

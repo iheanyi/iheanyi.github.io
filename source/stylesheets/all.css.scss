@@ -728,7 +728,7 @@ figure.effect-oscar {
 }
 
 .post-area {
-  padding-bottom: 20px;
+  //padding-bottom: 20px;
 }
 
 .article {
@@ -759,6 +759,7 @@ figure.effect-oscar {
 
   @include media($desktop) {
     @include pad(0);
+
   }
 }
 
@@ -808,6 +809,12 @@ figure.effect-oscar {
     font-size: 1.15em;
   }
 }
+
+.project-area {
+  display: block;
+  padding-top: 20px;
+}
+
 .project-text {
   @include media($desktop) {
     @include span-columns(5);
@@ -821,8 +828,11 @@ figure.effect-oscar {
   color: #4a4a4a;
 }
 .header-content {
+  position: relative;
+  display: block;
   width: 100%;
-  padding: 20px;
+  margin-top: 40px;
+  padding: 40px 0;
   text-align: center;
   color: #4A4A4A;
   margin: 0 auto;
@@ -832,9 +842,11 @@ figure.effect-oscar {
   @include span-columns(3);
 }
 .project-title {
+  display: block;
   font-weight: 600;
   font-size: 2em;
-  padding: 20px 0;
+  margin-top: 60px;
+  //padding: 20px 0;
   text-align: center;
   width: 100%;
 
