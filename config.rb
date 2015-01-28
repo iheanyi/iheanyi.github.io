@@ -57,6 +57,8 @@ sprockets.append_path File.join root, 'bower_components'
 sprockets.import_asset 'responsive-nav'
 sprockets.import_asset 'ionicons'
 
+activate :syntax, :line_numbers => false, :inline_theme => "Monokai"
+
 configure :development do
   activate :livereload, :port => '35730'
 end
@@ -78,7 +80,7 @@ end
 activate :blog do |blog|
   blog.prefix = "blog"
   blog.name = "blog"
-  blog.permalink = "blog/{title}.html"
+  blog.permalink = "{title}.html"
   blog.sources = "{title}.html"
   blog.layout = "blog_layout"
 end
@@ -100,6 +102,10 @@ page "projects/*", :layout => :projects_layout
 page "CNAME", :layout => false
 set :relative_links, true
 
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
 activate :directory_indexes
 
 # Build-specific configuration
@@ -119,3 +125,7 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+set :markdown_engine, :redcarpet
+set :markdown,  :fenced_code_blocks => true, :autolink => true, :smartypants => true
+

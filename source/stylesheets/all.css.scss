@@ -7,6 +7,9 @@
 @import "bourbon";
 @import "base/base";
 @import "neat";
+@import "code";
+@import "zen";
+@import "lib/prettify";
 
 $base-color: #C05D5F;
 $dark-color: #4a4a4a;
@@ -881,7 +884,7 @@ figure.effect-oscar {
   display: block;
   font-weight: 600;
   font-size: 2em;
-  margin-top: 60px;
+  padding-top: 40px;
   //padding: 20px 0;
   text-align: center;
   width: 100%;
@@ -922,10 +925,32 @@ figure.effect-oscar {
   }
 }
 
+.post-content {
+  font-family: "Gentium Basic",  Georgia, serif;
+  font-size: 1.25em;
+  padding: 20px 0;
+  color: #4a4a4a;
+}
+
+.post-container {
+  padding-top: 40px;
+  display: block;
+}
+.post-content-area {
+  @include pad();
+
+  @include media($desktop) {
+    @include pad(0);
+    @include span-columns(8);
+    @include shift(2);
+    display: block;
+  }
+}
+
 .writing-header-image {
   @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/MeOutside.png"));
   //@include background(linear-gradient(rgba(149,82, 81, 0.95), rgba(149,82, 81, 0.95)), url("../images/MeOutside.png"));
-  background-blend-mode: overlay;
+  background-blend-mode: lighten;
   background-size: cover;
   background-position: center center;
 }
@@ -942,9 +967,25 @@ figure.effect-oscar {
 
 .post-title {
   $color: #4a4a4a;
-  font-size: 1.75em;
+  font-size: 2em;
   font-weight: 600;
-  color: lighten($color, 10%);
+  color: $color;
+  //color: lighten($color, 10%);
+}
+
+
+pre {
+  @include pad();
+/*   background-color: #4a4a4a;
+  code {
+    color: #fff;
+  } */
+}
+
+p {
+  code {
+
+  }
 }
 
 .post-date {
@@ -959,9 +1000,9 @@ figure.effect-oscar {
   @include pad();
   text-align: left;
   //font-size: 1.25em;
-  font-family: "Genitum Basic", Georgia, serif;
+  //font-family: "Genitum Basic", Georgia, serif;
   //color: $base-color;
-  font-weight: 700;
+  font-weight: 500;
   @include media($desktop) {
     text-align: left;
     @include pad(0);
@@ -969,6 +1010,11 @@ figure.effect-oscar {
     @include span-columns(2);
   }
 }
+
+.disclaimer-text {
+  font-weight: 700;
+}
+
 .banner-header {
   position: relative;
   height: 200px;
@@ -976,8 +1022,11 @@ figure.effect-oscar {
   //background-color: #4a4a4a;
   @include media($desktop) {
     height: 400px;
-  }
+}
 
+.medium-text {
+  font-weight: 600px;
+}
 /*   &::after {
     position: absolute;
     top: 0;
