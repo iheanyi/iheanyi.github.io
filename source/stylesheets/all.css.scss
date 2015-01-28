@@ -168,6 +168,8 @@ body {
   //@include transition-delay(0.25s);
   text-align: right;
   height: $navigation-height;
+  //line-height: $navigation-height;
+  vertical-align: middle;
 
   &:before {
     content: '\f20e';
