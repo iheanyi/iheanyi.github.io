@@ -30,13 +30,13 @@
       <div class="container">
         <div class="hang-left">
           <% if current_article.next_article %>
-            <%= link_to "&laquo; Next Project: #{current_article.next_article.title} ", current_article.next_article.url %>
+            <%= link_to "&laquo; Next Project: #{current_article.next_article.title} ", current_article.next_article.url, :relative => true %>
           <% end %>
         </div>
 
         <div class="hang-right">
           <% if current_article.previous_article %>
-            <%= link_to "#{current_article.previous_article.title}: Prev Project &raquo;", current_article.previous_article.url %>
+            <%= link_to "#{current_article.previous_article.title}: Prev Project &raquo;", current_article.previous_article.url, :relative => true %>
           <% end %>
         </div>
       </div>
