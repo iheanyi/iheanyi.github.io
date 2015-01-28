@@ -17,7 +17,7 @@
       <div class="latest-projects">
         <div class="container-full">
           <div class="full-width-table project-items">
-              <% blog("projects").articles.each do |article| %>
+              <% blog("projects").articles.reverse.each do |article| %>
                 <figure class="effect-oscar placeholder-box-projects">
                  <%= image_tag(article.data.cover_photo) %>
 
