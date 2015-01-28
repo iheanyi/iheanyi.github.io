@@ -1,0 +1,45 @@
+---
+title: Iheanyi Ekechukwu | Writing
+---
+
+<div class="banner-header writing-header-image">
+
+</div>
+
+<div class="writing-area">
+  <div class="container">
+
+    <div class="row ">
+      <span class="page-heading heading-room">writing</span>
+<!--       <p class="page-paragraph-text"></p>
+ --> </div>
+
+      <div class="row">
+        <div class="writings">
+            <div class="blog-posts">
+
+              <% blog("blog").articles.each do |article| %>
+                  <div class="row blog-post-area">
+                    <span class="post-title"><a href="<%= article.url %>"><%= article.title %></a></span>
+
+                    <span class="post-date"><%= article.date.strftime('%B %e, %Y') %></span>
+
+                    <%= article.summary(250) %>
+
+<!--                     <span class="emphasis read-link"><%= link_to 'Read More...', article %></span> -->
+
+                  </div>
+
+                  <hr>
+              <% end %>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+          <p>Any opinions or views in my posts are my own, not those of my employer.</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+

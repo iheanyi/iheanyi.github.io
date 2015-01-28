@@ -10,8 +10,9 @@
 
 $base-color: #C05D5F;
 $dark-color: #4a4a4a;
-$tablet: new-breakpoint(min-width 640px);
-$desktop: new-breakpoint(min-width 768px);
+$tablet: new-breakpoint(min-width 40em);
+$tablet-screen: new-breakpoint(min-width 40em max-width 64.063em);
+$desktop: new-breakpoint(min-width 64.063em);
 
 $navigation-height: 60px;
 
@@ -67,6 +68,7 @@ body {
 }
 
 .branding {
+  display: inline-blocks;
   float: left;
   position: relative;
   //background-color: $base-color;
@@ -74,12 +76,19 @@ body {
   font-size: 1.25em;
   height: $navigation-height;
   line-height: $navigation-height;
+  //line-height: $navigation-height;
   @include span-columns(6);
   //width: 50px;
   text-align: center;
   vertical-align: middle;
 
+  @include media($tablet-screen) {
+    //@include pad();
+    float: left;
+  }
+
   @include media($desktop) {
+    @include pad(0);
     float: left;
     text-align: left;
   }
@@ -88,8 +97,13 @@ body {
   }
   .branding-logo {
     vertical-align: middle;
-    text-align: center;
+    text-align: left;
+    float: left;
     width: 100%;
+
+    @include media($tablet-screen) {
+      padding-left: 8px;
+    }
   }
 }
 
@@ -146,8 +160,12 @@ body {
     height: 100%;
   }
 
+  @include media($tablet) {
+    //@include pad();
+  }
   @include media($desktop) {
     float: none;
+    @include pad(0);
     @include reset-display;
     @include outer-container();
   }
@@ -170,6 +188,14 @@ body {
   height: $navigation-height;
   //line-height: $navigation-height;
   vertical-align: middle;
+
+  @include media($tablet-screen) {
+    display: block;
+  }
+
+  @include media($desktop) {
+    display: none;
+  }
 
   &:before {
     content: '\f20e';
@@ -232,6 +258,7 @@ body {
     float: none;
     @include outer-container();
   }
+
   ul.navigation-items {
     float: right;
     @include transition(all 0.35s);
@@ -390,7 +417,7 @@ body {
 }
 
 .about-area {
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 
@@ -715,6 +742,12 @@ figure.effect-oscar {
   background-position: center center;
 }
 
+.blog-header-image {
+  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/doubleme.jpg"));
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center center;
+}
 .page-paragraph-text {
   font-family: "Gentium Basic", Georgia, serif;
 }
@@ -867,17 +900,80 @@ figure.effect-oscar {
 }
 
 .projects-header-image {
-  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/doubleme.jpg"));
-  background-blend-mode: overlay, multiply;
+  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/abandonedrubble.jpg"));
+  background-blend-mode: lighten;
   background-size: cover;
   background-position: center center;
 }
 
+.blog-posts {
+  @include pad();
+  @include media($desktop) {
+    @include pad(0);
+  }
+}
+.blog-post-area {
+  //padding: 20px 0;
+
+  p {
+    font-size: 1.25em;
+    font-family: "Gentium Basic", Georgia, serif;
+    padding-top: 10px;
+  }
+}
+
+.writing-header-image {
+  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/MeOutside.png"));
+  //@include background(linear-gradient(rgba(149,82, 81, 0.95), rgba(149,82, 81, 0.95)), url("../images/MeOutside.png"));
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center center;
+}
+
+.writings {
+  @include media($desktop) {
+    @include span-columns(10);
+  }
+}
+
+.read-link {
+
+}
+
+.post-title {
+  $color: #4a4a4a;
+  font-size: 1.75em;
+  font-weight: 600;
+  color: lighten($color, 10%);
+}
+
+.post-date {
+  display: block;
+  font-size: 1.25em;
+}
+
+.post-summary {
+  font-family: "Gentium Basic", Georgia, serif;
+}
+.disclaimer {
+  @include pad();
+  text-align: left;
+  //font-size: 1.25em;
+  font-family: "Genitum Basic", Georgia, serif;
+  //color: $base-color;
+  font-weight: 700;
+  @include media($desktop) {
+    text-align: left;
+    @include pad(0);
+
+    @include span-columns(2);
+  }
+}
 .banner-header {
   position: relative;
   height: 200px;
   width: 100%;
-
+  //background-color: #4a4a4a;
   @include media($desktop) {
     height: 400px;
   }
@@ -953,6 +1049,10 @@ figure.effect-oscar {
 .push-down {
   padding-top: 15px;
 }
+
+.heading-room {
+  padding: 20px;
+}
 .page-heading {
     position: relative;
     display: block;
@@ -964,6 +1064,7 @@ figure.effect-oscar {
     font-size: 20px;
     //padding: 40px 0;
     margin: 0 auto;
+    text-align: center;
     //padding-bottom: 40px;
 }
 
