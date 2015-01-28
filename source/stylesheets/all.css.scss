@@ -926,7 +926,7 @@ figure.effect-oscar {
 }
 
 .time-section {
-  text-align: right;
+  text-align: left;
   @include span-columns(6);
 
   @include media($desktop) {
