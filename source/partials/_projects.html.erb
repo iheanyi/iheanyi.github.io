@@ -25,8 +25,9 @@
                     <h2><%=article.title %></h2>
                     <p><%= article.data.description %></p>
 
-                    <a href="<%= article.url %>"></a>
-                  </figcaption>
+                    <%= link_to "", article, :relative => true %>
+<!--                     <a href="<%= article.url %>"></a>
+ -->                  </figcaption>
                 </figure>
 
               <% end %>
