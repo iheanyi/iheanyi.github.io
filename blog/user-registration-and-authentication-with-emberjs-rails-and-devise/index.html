@@ -44,29 +44,7 @@
             <p>In, frappuccino fair trade pumpkin spice eu milk arabica, cup, to go cup at, single origin extraction americano cultivar, seasonal con panna beans spoon half and half. Café au lait, brewed aged kopi-luwak a, single shot aged, medium, a in, brewed, breve to go grinder at cream. Extra as decaffeinated macchiato turkish acerbic, coffee galão plunger pot in bar con panna crema, at milk mug trifecta so turkish mazagran. Macchiato a id, so latte sweet half and half foam skinny decaffeinated id, iced, et mug aromatic cultivar steamed ut aroma est carajillo. Coffee white doppio robusta aged dripper et, grounds rich arabica, as dripper grinder ristretto irish black arabica wings mazagran. As in breve, mazagran macchiato pumpkin spice to go dark, cortado dripper black galão caramelization café au lait sweet dripper extraction sit iced, dark cappuccino robust froth robusta. Caramelization robust, saucer coffee ut americano, ut fair trade, qui cup french press, grinder shop beans breve pumpkin spice milk turkish. Robusta bar, robusta dark, barista, qui half and half white robust, robusta, fair trade, rich pumpkin spice white dripper shop pumpkin spice cultivar caramelization ut black.</p>
 
 <p><img alt="Test Image" src="../../images/snow-slush.png" /></p>
-<div class="highlight ruby"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23</pre></td><td class="code"><pre><span class="k">class</span> <span class="nc">Api</span><span class="o">::</span><span class="no">V1</span><span class="o">::</span><span class="no">AddressesController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+<pre class="highlight ruby"><code><span class="k">class</span> <span class="nc">Api</span><span class="o">::</span><span class="no">V1</span><span class="o">::</span><span class="no">AddressesController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
 
   <span class="k">def</span> <span class="nf">show</span>
     <span class="n">render</span> <span class="ss">json: </span><span class="no">Address</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="ss">:id</span><span class="p">])</span>
@@ -89,8 +67,7 @@
       <span class="n">params</span><span class="p">.</span><span class="nf">require</span><span class="p">(</span><span class="ss">:address</span><span class="p">).</span><span class="nf">permit</span><span class="p">(</span><span class="ss">:street_address</span><span class="p">,</span> <span class="ss">:street_address_line_2</span><span class="p">,</span> <span class="ss">:city</span><span class="p">,</span> <span class="ss">:zip</span><span class="p">)</span>
     <span class="k">end</span>
 <span class="k">end</span>
-</pre></td></tr></tbody></table>
-</div>
+</code></pre>
 
 
             <a href="https://twitter.com/share" class="twitter-share-button" data-via="kwuchu" data-size="large">Tweet</a>
