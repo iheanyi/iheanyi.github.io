@@ -648,8 +648,8 @@ figure.effect-oscar {
     padding: 3em;
     //font-color: $dark-color;
     //background-color: rgba(58,52,42,0.7);
-    //background-color: rgba(58,52,42,0.7);
-    background-color: rgba(192,93,95,0.7);
+    background-color: rgba(58,52,42,0.7);
+    //background-color: rgba(192,93,95,0.7);
 
     -webkit-transition: background-color 0.35s;
     transition: background-color 0.35s;
@@ -1029,6 +1029,11 @@ p {
   //font-family: "Genitum Basic", Georgia, serif;
   //color: $base-color;
   font-weight: 500;
+
+  @include media($tablet) {
+    text-align: center;
+  }
+
   @include media($desktop) {
     text-align: left;
     @include pad(0);
@@ -1070,6 +1075,11 @@ pre.lineno{
 .left-section {
   display: none;
   text-align: right;
+
+  @include media($tablet) {
+    @include reset-display;
+    @include span-columns(4);
+  }
   @include media($desktop) {
     @include reset-display;
     @include span-columns(4);
@@ -1174,6 +1184,13 @@ pre.lineno{
   @include pad();
   @include span-columns(12);
 
+
+  @include media($tablet) {
+    @include pad(0);
+    padding-right: 4px;
+    @include span-columns(8);
+  }
+
   @include media($desktop) {
     @include pad(0);
     @include span-columns(8);
@@ -1272,7 +1289,6 @@ footer {
   //padding-bottom: 16px;
 }
 .landing-post {
-  height: 250px;
   max-height: 400px;
   text-align: left;
 
