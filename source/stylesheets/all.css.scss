@@ -694,43 +694,24 @@ figure.effect-oscar {
   }
 }
 
-.footer {
-  height: 150px;
-  background-color: #4A4A4A;
-  line-height: 150px;
-  font-size: 16px;
-  color: #fff;
 
-  .copyright {
-    @include span-columns(10);
-    @include shift(1);
-    @include omega();
-    @include media($desktop) {
-      @include shift(0);
-      @include span-columns(6);
-    }
-
-  /*   &::after {
-      line-height: 8px;
-      height: 0;
-    } */
-  }
-}
 
 .social-media-list {
-  @include span-columns(10);
-  @include shift(1);
+  display: block;
+
   list-style: none;
+  font-size: 1.5em;
 
   @include media($desktop) {
-    @include span-columns(6);
-    @include shift(0);
   }
+
   li {
     margin-left: 0;
     display: inline-block;
+    margin-right: 8px;
   }
 }
+
 
 #element::-webkit-scrollbar {
     display: none;
@@ -1130,11 +1111,12 @@ pre.lineno{
 }
 
 .contact-header-image {
-  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/doubleme.jpg"));
-  background-blend-mode: overlay, multiply;
+  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/GrayscaleDoubleMe.png"));
+  background-blend-mode: lighten;
   background-size: cover;
   background-position: center center;
 }
+
 .heading-room {
   display: block;
   @include pad();
@@ -1195,6 +1177,60 @@ pre.lineno{
       color: $accent;
       border-bottom: 1px $accent dotted;
       //font-weight: 700;
+    }
+  }
+}
+
+@include reset-display;
+
+footer {
+  //height: 100px;
+  background-color: #4a4a4a;
+  color: #fff;
+
+  padding: 50px 0;
+}
+
+
+.pad {
+  @include pad();
+
+  @include media($desktop) {
+    @include pad(0);
+  }
+}
+
+.footer-left {
+  //@include span-columns(4)
+  @include span-columns(12);
+  text-align: center;
+  @include media($desktop) {
+    @include span-columns(6);
+    text-align: left;
+  }
+}
+
+.footer-right {
+  @include span-columns(12);
+  //float: right;
+  text-align: center;
+  display: none;
+  @include media($desktop) {
+    @include reset-display;
+    @include span-columns(6);
+    text-align: right;
+  }
+}
+
+.footer-navigation {
+  display: inline;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-right: 8px;
+    &:last-child {
+      margin: 0;
     }
   }
 }

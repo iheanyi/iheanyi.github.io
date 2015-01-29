@@ -47,6 +47,8 @@
 #   end
 # end
 require 'rouge'
+require 'builder'
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
@@ -105,6 +107,11 @@ set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 activate :directory_indexes
+page "/sitemap.xml", layout: false
+
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-36709787-8' # Replace with your property ID.
+end
 
 # Build-specific configuration
 configure :build do
