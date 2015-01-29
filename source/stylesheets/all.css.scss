@@ -700,7 +700,7 @@ figure.effect-oscar {
   display: block;
 
   list-style: none;
-  font-size: 1.5em;
+  font-size: 1.75em;
 
   @include media($desktop) {
   }
@@ -709,6 +709,7 @@ figure.effect-oscar {
     margin-left: 0;
     display: inline-block;
     margin-right: 8px;
+
   }
 }
 
@@ -1231,6 +1232,16 @@ footer {
     margin-right: 8px;
     &:last-child {
       margin: 0;
+    }
+
+    a {
+      color: lighten($base-color, 20%);
+      //color: #fff;
+      font-weight: 600;
+
+      &:hover {
+        color: $base-color;
+      }
     }
   }
 }
