@@ -3,14 +3,25 @@
 
   <div class="recent-posts reset-disp">
     <div class="container">
+      <div class="row landing-posts">
 
-    <div class="full-width">
-      <div class="placeholder-box">Item 1</div>
-      <div class="placeholder-box">Item 2</div>
-      <div class="placeholder-box">Item 3</div>
-    </div>
+        <div class="">
 
-    <button class="circle-button lg-button">READ MORE ARTICLES</button>
+          <% blog("blog").articles[0..3].each do |article| %>
+              <div class="landing-post pad">
+                <span class="landing-post-title"><%= link_to article.title, article, :relative => true %></span>
+
+                <span class="post-date"><%= article.date.strftime('%B %e, %Y') %></span>
+
+                <%= article.summary(250) %>
+              </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row">
+        <button class="circle-button lg-button"><%= link_to 'read more articles', '/blog.html' %></button>
+      </div>
 
     </div>
 

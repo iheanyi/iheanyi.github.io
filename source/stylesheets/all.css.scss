@@ -94,6 +94,14 @@ body {
     text-align: left;
   }
   &.background-active {
+
+    & > a {
+      color: #fff;
+
+      &:hover {
+        color: lighten($base-color, 10%);
+      }
+    }
     //height: $navigation-height;
   }
   .branding-logo {
@@ -503,7 +511,16 @@ body {
   color: $base-color;
 }
 
+.pad-left {
+  padding-left: 8px;
+
+  @include media($desktop) {
+    padding-left: 0;
+  }
+}
+
 button.circle-button {
+  position: relative;
   border-radius: 16px;
   padding: 16px;
   text-transform: uppercase;
@@ -514,13 +531,12 @@ button.circle-button {
     @include transition(all 0.5s);
     opacity: 0;
   }
-  &:hover{
-
-/*      &::after  {
-       content: " >>";
-       opacity: 1;
-     } */
-
+  a {
+    position: relative;
+    display: block;
+    color: #fff;
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -733,12 +749,13 @@ figure.effect-oscar {
 }
 .page-paragraph-text {
   font-family: "Gentium Basic", Georgia, serif;
+  font-size: 1.25em;
 }
 
 .projects-area {
   text-align: center;
   //padding: 40px 0;
-  font-size: 1.25em;
+  //font-size: 1.25em;
 }
 
 @include reset-display;
@@ -770,6 +787,7 @@ figure.effect-oscar {
 }
 .projects-page-heading {
   //padding: 20px 0;
+  padding-bottom: 10px;
 }
 
 .post-area {
@@ -1127,20 +1145,18 @@ pre.lineno{
     @include pad(0);
     //padding: 20px 0;
     padding-top: 20px;
-    padding-bottom: 10px;
+    //padding-bottom: 10px;
   }
 }
 .page-heading {
     position: relative;
     display: block;
-    //font-variant: small-caps;
     text-transform: uppercase;
     font-size: 1.5em;
     color: #4A4A4A;
     font-weight: 600;
-    font-size: 20px;
-    //padding: 40px 0;
-    margin: 0 auto;
+    font-size: 1.15em;
+    padding-bottom: 4px;
     //text-align: center;
     //padding-bottom: 40px;
 }
@@ -1188,7 +1204,7 @@ footer {
   //height: 100px;
   background-color: #4a4a4a;
   color: #fff;
-
+  font-weight: 600;
   padding: 50px 0;
 }
 
@@ -1243,5 +1259,33 @@ footer {
         color: $base-color;
       }
     }
+  }
+}
+
+.landing-posts {
+  padding-bottom: 20px;
+}
+
+.landing-post-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  //padding-bottom: 16px;
+}
+.landing-post {
+  height: 250px;
+  max-height: 400px;
+  text-align: left;
+
+  .post-date {
+    padding: 4px 0;
+  }
+  @include media($desktop) {
+    @include span-columns(4);
+    text-align: left;
+  }
+
+  p {
+    font-family: "Gentium Basic", Georgia, serif;
+    font-size: 1.25em;
   }
 }
