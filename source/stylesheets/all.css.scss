@@ -8,9 +8,6 @@
 @import "base/base";
 @import "neat";
 @import "prettify";
-//@import "code";
-//@import "zen";
-//@import "lib/prettify";
 
 $base-color: #C05D5F;
 $dark-color: #4a4a4a;
@@ -762,8 +759,35 @@ figure.effect-oscar {
   font-size: 1.25em;
 }
 
+@include reset-display;
+.contact-area {
+  @include pad();
+
+  @include media($desktop) {
+    @include pad(0);
+  }
+}
+.contact-details {
+  position: relative;
+  display: block;
+  font-size: 1.25em;
+  font-family: "Gentium Basic", Georgia, serif;
+
+  @include media($desktop) {
+
+  }
+}
+
+.contact-container {
+  padding-bottom: 20px;
+  @include media($desktop) {
+    @include span-columns(10);
+    @include shift(1);
+  }
+
+}
 .projects-page-heading {
-  padding: 20px 0;
+  //padding: 20px 0;
 }
 
 .post-area {
@@ -774,6 +798,7 @@ figure.effect-oscar {
   font-size: 1.25em;
   font-family: "Gentium Basic", Georgia, serif;
   color: #4A4A4A;
+  //font-weight: 600;
   padding-bottom: 20px;
 }
 .center-text {
@@ -1016,6 +1041,10 @@ p {
   font-weight: 700;
 }
 
+pre.lineno{
+  margin: 0px;
+}
+
 .banner-header {
   position: relative;
   height: 200px;
@@ -1100,8 +1129,23 @@ p {
   padding-top: 15px;
 }
 
+.contact-header-image {
+  @include background(linear-gradient(rgba(39,54, 60, 0.95), rgba(39,54, 60, 0.95)), url("../images/doubleme.jpg"));
+  background-blend-mode: overlay, multiply;
+  background-size: cover;
+  background-position: center center;
+}
 .heading-room {
-  padding: 20px;
+  display: block;
+  @include pad();
+  text-align: center;
+
+  @include media($desktop) {
+    @include pad(0);
+    //padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
 }
 .page-heading {
     position: relative;
@@ -1114,10 +1158,16 @@ p {
     font-size: 20px;
     //padding: 40px 0;
     margin: 0 auto;
-    text-align: center;
+    //text-align: center;
     //padding-bottom: 40px;
 }
 
+.contact-blurb {
+  font-size: 1.25em;
+  font-weight: 500;
+  font-family: "Gentium Basic", Georgia, serif;
+  text-align: center;
+}
 .emphasis {
   font-weight: 700;
 }
