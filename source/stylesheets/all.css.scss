@@ -356,12 +356,16 @@ body {
   height: 600px;
   position: relative;
   @include background(url("../images/snow-slush.png"));
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+
   color: #fff;
   &::before {
 
+  }
+
+  @include media($desktop) {
+    background-position: center;
+    background-size: cover;
   }
 }
 
