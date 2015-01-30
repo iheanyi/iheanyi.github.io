@@ -5,6 +5,7 @@ tags:
 cover_photo: "pageunliker.png"
 description: EmberJS app for easily unliking Facebook pages!
 project_url: http://pageunliker.com
+source_url: http://github.com/iheanyi/facebook-page-unliker
 image_list:
   - pageunliker/pageunliker.png
   -
