@@ -10,7 +10,7 @@ cover_photo: NDSearchFull.png
 image_list:
   - ndsearch/NDSearchFull.png
   - ndsearch/WorkingAgenda.png
-skills:
+stack:
   - Ruby on Rails
   - EmberJS
   - PostgreSQL
@@ -18,7 +18,7 @@ skills:
 ---
 
 
-##### Technologies Used
+##### Tech Stack
 EmberJS, Ruby on Rails, PostgreSQL
 
 
