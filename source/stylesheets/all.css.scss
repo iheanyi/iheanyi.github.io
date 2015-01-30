@@ -78,7 +78,7 @@ body {
   height: $navigation-height;
   line-height: $navigation-height;
   //line-height: $navigation-height;
-  @include span-columns(6);
+  @include span-columns(8);
   //width: 50px;
   text-align: center;
   vertical-align: middle;
@@ -90,6 +90,7 @@ body {
 
   @include media($desktop) {
     @include pad(0);
+    @include span-columns(6);
     float: left;
     text-align: left;
   }
