@@ -382,11 +382,13 @@ body {
 
   @include span-columns(10);
   @include pad(12px);
-  margin-top: 125px;
+  margin-top: 80px;
 
   @include media($desktop) {
     @include span-columns(5);
     @include pad(0);
+    margin-top: 125px;
+
   }
 }
 
