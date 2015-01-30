@@ -14,7 +14,7 @@ $dark-color: #4a4a4a;
 $tablet: new-breakpoint(min-width 40em);
 $tablet-screen: new-breakpoint(min-width 40em max-width 64.063em);
 $desktop: new-breakpoint(min-width 64.063em);
-
+$desktop-screen: new-breakpoint(min-width 40em max-width 90em);
 $navigation-height: 60px;
 
 /* GLOBALS */
@@ -1248,7 +1248,7 @@ footer {
 .pad {
   @include pad();
 
-  @include media($desktop) {
+  @include media($desktop-screen) {
     @include pad(0);
   }
 }
