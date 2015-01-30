@@ -3,7 +3,7 @@ title: Notre Dame Class Search
 date: 2014-12-27 22:09 UTC
 slug: 'notre-dame-class-search'
 tags:
-description: Rails and EmberJS application for finding/scheduling classes at Notre Dame!
+description: Rails and EmberJS application for scheduling Notre Dame classes.
 project_url: http://ndsearch.co
 source_url: https://github.com/iheanyi/ClassSearch
 cover_photo: NDSearchFull.png
