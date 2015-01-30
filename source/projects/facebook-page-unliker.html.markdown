@@ -2,14 +2,25 @@
 title: Facebook Page Unliker
 date: 2015-01-27 22:20 UTC
 tags:
-cover_photo: "pageunliker.png"
-description: EmberJS app for easily unliking Facebook pages!
+cover_photo: pageunliker/pageunlikedetail.png
+description: Easily unlike old and embarrassing Facebook pages!
 project_url: http://pageunliker.com
 source_url: http://github.com/iheanyi/facebook-page-unliker
+stack:
+  - EmberJS
 image_list:
-  - pageunliker/pageunliker.png
-  -
-  -
+  - pageunliker/pageunlikedetail.png
 ---
 
-In, frappuccino fair trade pumpkin spice eu milk arabica, cup, to go cup at, single origin extraction americano cultivar, seasonal con panna beans spoon half and half. Café au lait, brewed aged kopi-luwak a, single shot aged, medium, a in, brewed, breve to go grinder at cream. Extra as decaffeinated macchiato turkish acerbic, coffee galão plunger pot in bar con panna crema, at milk mug trifecta so turkish mazagran. Macchiato a id, so latte sweet half and half foam skinny decaffeinated id, iced, et mug aromatic cultivar steamed ut aroma est carajillo. Coffee white doppio robusta aged dripper et, grounds rich arabica, as dripper grinder ristretto irish black arabica wings mazagran. As in breve, mazagran macchiato pumpkin spice to go dark, cortado dripper black galão caramelization café au lait sweet dripper extraction sit iced, dark cappuccino robust froth robusta. Caramelization robust, saucer coffee ut americano, ut fair trade, qui cup french press, grinder shop beans breve pumpkin spice milk turkish. Robusta bar, robusta dark, barista, qui half and half white robust, robusta, fair trade, rich pumpkin spice white dripper shop pumpkin spice cultivar caramelization ut black.
+##### Tech Stack
+EmberJS
+
+
+##### Description
+If you are anything like the high school version of me, you probably *became a fan* of hundreds of embarrassing pages on Facebook. While searching online for a solution, I couldn't really find one that allowed me to preserve certain Facebook Pages, such as musicians and artists. Thus, I set out to make my third EmberJS application, although it did not require a back-end. Using [Ember Simple Auth](https://github.com/simplabs/ember-simple-auth) in combination with [Ember Simple Auth Torii](https://github.com/simplabs/ember-simple-auth/tree/master/packages/ember-simple-auth-torii).
+
+This application was quite successful, reaching the frontpage of HackerNews in addiiton to being #1 on [ProductHunt](http://www.producthunt.com/posts/facebook-page-unliker) for January 10th. Not too shabby!
+
+##### Press
+* [Tech CheatSheet](http://wallstcheatsheet.com/technology/15-useful-tech-products-you-missed-last-week.html/?a=viewall)
+* [Tecno Xplora](http://www.tecnoxplora.com/redes-sociales/librate-plumazo-paginas-facebook-que-gustan_2015011300228.html)
