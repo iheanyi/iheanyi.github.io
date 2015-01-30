@@ -136,3 +136,13 @@ set :markdown,  :fenced_code_blocks => true, :autolink => true, :smartypants => 
 
 activate :syntax, :line_numbers => false #, :inline_theme => "github"
 
+helpers do
+  def is_page_active(page)
+    current_page.url == page ? {:class => 'is-active'} : {}
+  end
+
+  def is_page_selected(page)
+    current_page.url.include?(page) ? "selected" : ''
+  end
+end
+

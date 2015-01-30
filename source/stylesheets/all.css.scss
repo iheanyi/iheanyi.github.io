@@ -316,6 +316,12 @@ body {
           color: $base-color;
         }
       }
+
+      &.selected > a {
+        @include media($desktop) {
+          color: $base-color;
+        }
+      }
     }
 }
 
@@ -539,12 +545,18 @@ button.circle-button {
     @include transition(all 0.5s);
     opacity: 0;
   }
+
+  a::before {
+    height: 100%;
+    width: 100%;
+  }
   a {
     position: relative;
     display: block;
     color: #fff;
-    height: 100%;
+    height: 10%;
     width: 100%;
+    //line-height: 48px;
   }
 }
 
@@ -1244,6 +1256,7 @@ footer {
   padding: 50px 0;
 }
 
+button:focus {outline:0;}
 
 .pad {
   @include pad();

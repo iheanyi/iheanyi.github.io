@@ -6,10 +6,10 @@
 
     <nav class="nav-collapse">
         <ul class="navigation-items">
-            <li><%= link_to 'About', '/about.html', :relative => true %></li>
-            <li><%= link_to 'Projects', '/projects.html', :relative => true %></li>
-            <li><%= link_to 'Writing', '/blog.html', :relative => true %></li>
-            <li><%= link_to 'Contact', '/contact.html', :relative= => true %></li>
+            <li class="<%= is_page_selected('/about/') %>" ><%= link_to 'About', '/about.html', :relative => true %></li>
+            <li class="<%= is_page_selected('/projects/') %>"  ><%= link_to 'Projects', '/projects.html', :relative => true %></li>
+            <li class="<%= is_page_selected('/blog/') %>"><%= link_to 'Writing', '/blog.html', :relative => true %></li>
+            <li class="<%= is_page_selected('/contact/') %>"><%= link_to 'Contact', '/contact.html', :relative= => true %></li>
         </ul>
     </nav>
   </div>
