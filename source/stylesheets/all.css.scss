@@ -995,15 +995,20 @@ figure.effect-oscar {
 
 }
 
+
 .post-title {
   $color: #4a4a4a;
   font-size: 2em;
   font-weight: 600;
-  color: $base-color;
+  color: $color;
   //color:
   //color: lighten($color, 10%);
 }
 
+
+.actual-post-title {
+  font-weight: 700;
+}
 
 pre {
   @include pad();

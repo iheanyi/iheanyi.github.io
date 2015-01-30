@@ -6,14 +6,18 @@
   <div class="container post-area">
         <div class="row">
           <div class="header-content">
-            <span class="project-title"><%= current_article.title %></span>
+            <span class="project-title actual-post-title"><%= current_article.title %></span>
 
             <p class="project-description-text"><%= current_article.data.description %></p>
           </div>
         </div>
       <div class="row project-content">
           <div class="thumbnails">
-            <%= image_tag(current_article.data.cover_photo) %>
+
+          <% current_article.data.image_list .each do |image| %>
+            <%= image_tag(image) %>
+          <% end %>
+
           </div>
 
           <div class="project-text article">
@@ -23,6 +27,10 @@
 
             <% if current_page.data.project_url %>
               <a target="_blank" href="<%= current_article.data.project_url %>">View Project</a>
+            <% end %>
+
+            <% if current_page.data.source_url %>
+              <a target="_blank" href="<%= current_article.data.source_url%>">View Source</a>
             <% end %>
           </div>
     </div>
