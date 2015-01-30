@@ -20,7 +20,7 @@ title: Iheanyi Ekechukwu | Writing
 
               <% blog("blog").articles.each do |article| %>
                   <div class="row blog-post-area">
-                    <span class="post-title"><a href="<%= article.url %>"><%= article.title %></a></span>
+                    <span class="post-title"><%= link_to article.title, article, :relative => true %></a></span>
 
                     <span class="post-date"><%= article.date.strftime('%B %e, %Y') %></span>
 

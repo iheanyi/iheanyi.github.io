@@ -7,6 +7,8 @@
       <div class="post-content-area">
         <div class="row">
           <span class="post-title"><%= current_article.title %></span>
+         <span class="post-date"><%= current_article.date.strftime('%B %e, %Y') %></span>
+
         </div>
         <div class="row post-content">
             <%= yield %>
