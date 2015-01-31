@@ -738,7 +738,8 @@ figure.effect-oscar {
 
   list-style: none;
   font-size: 1.75em;
-
+  padding: 0;
+  margin: 0;
   @include media($desktop) {
   }
 
@@ -753,6 +754,12 @@ figure.effect-oscar {
 
 #element::-webkit-scrollbar {
     display: none;
+}
+
+.about-links, .services {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .about-header-image {
@@ -956,6 +963,16 @@ figure.effect-oscar {
   background-position: center center;
 }
 
+p {
+ code {
+   background-color: #272822;
+   color: #f8f8f2;
+   padding: 4px;
+   font-size: 1em;
+ }
+}
+
+
 .blog-posts {
   @include pad();
   @include media($desktop) {
@@ -965,7 +982,7 @@ figure.effect-oscar {
 .blog-post-area {
   //padding: 20px 0;
 
-  p {
+  p, ul {
     font-size: 1.25em;
     font-family: "Gentium Basic", Georgia, serif;
     padding-top: 10px;
@@ -978,8 +995,10 @@ figure.effect-oscar {
   padding: 20px 0;
   color: #4a4a4a;
 
-  & > h1,h2,h3,h4,h5,h6 {
-    font-color: $base-color;
+  ul {
+    list-style-type: disc;
+    padding-left: 1em;
+    padding-bottom: 1em;
   }
 }
 
