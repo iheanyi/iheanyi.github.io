@@ -351,7 +351,4 @@ By running `rspec` from the CL, you should see four of the tests passing, with o
 
 From these tests, we are sending a POST request to the `users/registrations#create` method and ensuring that our controllers behave as expected. If there are valid credentials and email doesn't exist, we expect the user to be created and then signed in. Else, if the user already exists, then we should not create the user and not sign them in. 
 
-* [Stanley]() for helping me figure out how to do this in the first place.
-* [Dockyard]() for being a reference point on how to write a tutorial.
-
 
