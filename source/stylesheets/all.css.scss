@@ -1272,19 +1272,23 @@ footer {
   background-color: #4a4a4a;
   color: #fff;
   font-weight: 600;
-  padding: 50px 0;
-}
+  padding: 2.5%;
+/*   padding: 10px 0;
+ */}
 
 button:focus {outline:0;}
 
 .pad {
-  @include pad();
-
+/*   @include pad(0);
+ */
   @include media($desktop-screen) {
     @include pad(0);
   }
 }
 
+.copyright, .footer-list {
+  line-height: initial;
+}
 .footer-left {
   //@include span-columns(4)
   @include span-columns(12);
@@ -1297,7 +1301,6 @@ button:focus {outline:0;}
 
 .footer-right {
   @include span-columns(12);
-  //float: right;
   text-align: center;
   display: none;
   @include media($desktop) {
