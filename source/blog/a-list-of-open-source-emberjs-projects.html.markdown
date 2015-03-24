@@ -22,5 +22,8 @@ A somewhat new-ish blogging platform, Ghost uses a back-end developed in NodeJS.
 Wordset is an open-source, collaborative dictionary that aims to democratize language. The back-end is built using Ruby on Rails and [Grape](http://intridea.github.io/grape/) for the API server.  
 [View Source](https://github.com/wordset/wordset-ui)
 
+**[HN Reader](http://chancancode.github.io/hn-reader/about)**  
+An embitious Hacker News reader built using Ember.JS.  
+[View Source](https://github.com/chancancode/hn-reader)
 
 **Have suggestions for another open-source project to add? Please [open an issue](https://github.com/iheanyi/iheanyi.github.io/issues/new) on this repo!**
