@@ -1389,9 +1389,11 @@ button:focus {outline:0;}
   .post-date {
     padding: 4px 0;
   }
+
   @include media($desktop) {
     @include span-columns(4);
     text-align: left;
+    padding: 16px 0;
   }
 
   p {
