@@ -3,10 +3,8 @@
 
   <div class="latest-projects">
     <div class="container-full">
-
-
       <div class="full-width-table project-items">
-          <% blog("projects").articles[0..3].each do |article| %>
+          <% blog("projects").articles[0..2].each do |article| %>
             <figure class="effect-oscar placeholder-box-projects">
              <%= image_tag(article.data.cover_photo) %>
 
