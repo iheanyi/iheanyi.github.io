@@ -15,7 +15,7 @@ $tablet: new-breakpoint(min-width 40em);
 $tablet-screen: new-breakpoint(min-width 40em max-width 64.063em);
 $desktop: new-breakpoint(min-width 64.063em);
 $desktop-screen: new-breakpoint(min-width 40em max-width 90em);
-$navigation-height: 60px;
+$navigation-height: 80px;
 
 /* GLOBALS */
 body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
@@ -26,13 +26,35 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   background: #e5e5e5;
   min-height: 100%;
 }
+html, body {
+  height: 100%;
+}
 
+#wrapper {
+  min-height: 100%;
+  margin-bottom: -100px;
+
+  @include media($desktop) {
+    margin-bottom: -150px;
+  }
+}
+
+#wrapper:after {
+  content: "";
+  display: block;
+  height: 100px;
+
+  @include media($desktop) {
+    height: 150px;
+  }
+}
 .container {
   @include outer-container();
 }
@@ -188,7 +210,7 @@ body {
   right: 0;
   float: right;
   background-color: $base-color;
-  padding: 16px;
+  padding: 0 16px;
   font-color: #fff;
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
@@ -196,7 +218,7 @@ body {
   //@include transition-delay(0.25s);
   text-align: right;
   height: $navigation-height;
-  //line-height: $navigation-height;
+  line-height: $navigation-height;
   vertical-align: middle;
 
   @include media($tablet-screen) {
@@ -1035,7 +1057,9 @@ p {
 
 }
 
-
+.post-heading {
+/*   text-align: center;
+ */}
 .post-title {
   $color: #4a4a4a;
   font-size: 2em;
@@ -1047,7 +1071,11 @@ p {
 
 
 .actual-post-title {
+  display: block;
+  font-size: 2.5em;
   font-weight: 700;
+  margin-top: 30px;
+/*   text-align: center;*/
 }
 
 pre {
@@ -1272,15 +1300,26 @@ footer {
   background-color: #4a4a4a;
   color: #fff;
   font-weight: 600;
-  padding: 2.5%;
-/*   padding: 10px 0;
- */}
+  padding: 5% 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+
+  @include media($tablet) {
+    padding: 2.5% 0;
+  }
+  @include media($desktop) {
+    padding: 2.5% 0;
+    height: 150px;
+  }
+}
 
 button:focus {outline:0;}
 
 .pad {
-/*   @include pad(0);
- */
+ @include pad();
+
   @include media($desktop-screen) {
     @include pad(0);
   }

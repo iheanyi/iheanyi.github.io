@@ -20,8 +20,12 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <%= partial "partials/navigation" %>
-    <%= yield %>
+    <div id="wrapper">
+      <%= partial "partials/navigation" %>
+
+      <%= yield %>
+    </div>
+
 
 
     <%= partial "partials/footer" %>
