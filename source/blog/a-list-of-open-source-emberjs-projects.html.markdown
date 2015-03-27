@@ -26,4 +26,8 @@ Wordset is an open-source, collaborative dictionary that aims to democratize lan
 An embitious Hacker News reader built using Ember.JS.  
 [View Source](https://github.com/chancancode/hn-reader)
 
+**[Ember Observer](http://emberobserver.com)** -  *Thanks [John](https://github.com/johnotander)!*  
+A website built for discovering and comparing Ember-CLI addons.  
+[View Source](https://github.com/emberobserver/client)  
+
 **Have suggestions for another open-source project to add? Please [open an issue](https://github.com/iheanyi/iheanyi.github.io/issues/new) on this repo!**
