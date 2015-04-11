@@ -30,4 +30,12 @@ An embitious Hacker News reader built using Ember.JS.
 A website built for discovering and comparing Ember-CLI addons.  
 [View Source](https://github.com/emberobserver/client)  
 
+**[Diesel](https://diesel.aptible.com)**  
+The dashboard for the Aptible PaaS. This project serves as a good example for organizing your projects with [pods](http://www.ember-cli.com/#pod-structure).  
+[View Source](https://github.com/aptible/diesel.aptible.com)
+
+**[Ember Addons](http://emberaddons.com)**  
+Another website for finding addons for Ember-CLI.  
+[View Source](https://github.com/gcollazo/ember-cli-addon-search)
+
 **Have suggestions for another open-source project to add? Please [open an issue](https://github.com/iheanyi/iheanyi.github.io/issues/new) on this repo!**
