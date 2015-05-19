@@ -885,9 +885,10 @@ figure.effect-oscar {
 .thumbnails {
   @include span-columns(12);
   padding-bottom: 30px;
-
+  display: none;
   @include media($desktop) {
     @include span-columns(6);
+    display: none;
   }
 }
 
@@ -933,9 +934,30 @@ figure.effect-oscar {
 }
 
 .project-text {
+  @include span-columns(12);
   @include media($desktop) {
-    @include span-columns(5);
+    //@include span-columns(5);
     //@include shift(3);
+  }
+
+  img {
+    margin: 0 auto;
+    display: block;
+
+    &::before {
+      content: attr(title);
+      text-align: center;
+      display: block;
+      position: relative;
+      top: 0;
+      bottom: 0;
+    }
+
+    &+em {
+      text-align: center;
+      display: block;
+      margin-top: 12px;
+    }
   }
 }
 
