@@ -17,6 +17,9 @@ stack:
 
 ---
 
+##### Tech Stack
+EmberJS, Ruby on Rails, PostgreSQL
+
 ##### Description
 
 During my final semester at the University of Notre Dame, I took a class called Interaction Design, where we were focusing on learning about User Experience and Human Computer Interaction. One of our two assignments was to choose an existing interface and improve upon it. For my interface of choice, I chose [Notre Dame's Class Search website](http://class-search.nd.edu), an interface which had frustrated me for the last 4.5 years.
@@ -34,5 +37,3 @@ Rather than giving each section of the application (Departments/Professors/Attri
 
 Overall, my re-design of the Class Search interface was well-received by students of the University. At the time of writing, Class Search has 2,652 users, 3,592 sessions, and 4,230 pageviews. You can check out an article written by the Design apartment about my application [here](http://artdept.nd.edu/news-and-events/news/53707-iheanyi-ekechukwu-creates-nd-class-search/).
 
-##### Tech Stack
-EmberJS, Ruby on Rails, PostgreSQL

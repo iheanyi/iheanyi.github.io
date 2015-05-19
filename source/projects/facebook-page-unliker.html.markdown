@@ -11,6 +11,8 @@ stack:
 image_list:
   - pageunliker/pageunlikedetail.png
 ---
+##### Tech Stack
+EmberJS, Facebook Graph API
 
 ##### Description
 If you are anything like the high school version of me, you probably *became a fan* of hundreds of embarrassing pages on Facebook. While searching online for a solution, I couldn't really find one that allowed me to preserve certain Facebook Pages, such as musicians and artists. Thus, I set out to make my third EmberJS application, although it did not require a back-end. Using [Ember Simple Auth](https://github.com/simplabs/ember-simple-auth) in combination with [Ember Simple Auth Torii](https://github.com/simplabs/ember-simple-auth/tree/master/packages/ember-simple-auth-torii).
@@ -20,8 +22,7 @@ If you are anything like the high school version of me, you probably *became a f
 
 This application was quite successful, reaching the frontpage of HackerNews in addition to being #1 on [ProductHunt](http://www.producthunt.com/posts/facebook-page-unliker) for January 10th. At the time of writing, Page Unliker has 28, 357 sessions, with 25,506 users, and 110,335 users. Not too shabby!
 
-##### Tech Stack
-EmberJS
+
 
 ##### Press
 * [Tech CheatSheet](http://wallstcheatsheet.com/technology/15-useful-tech-products-you-missed-last-week.html/?a=viewall)
