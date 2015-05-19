@@ -23,13 +23,19 @@
           <div class="project-text article">
 
             <span class="accent emphasis sans-font">Created in <%= current_article.date.year %></span>
+
             <%= yield %>
+
+            <hr>
 
             <% if current_page.data.project_url %>
               <a target="_blank" href="<%= current_article.data.project_url %>">View Project</a>
             <% end %>
 
             <% if current_page.data.source_url %>
+              <% if current_page.data.source_url %>
+                &bullet;
+              <% end %>
               <a target="_blank" href="<%= current_article.data.source_url%>">View Source</a>
             <% end %>
           </div>
