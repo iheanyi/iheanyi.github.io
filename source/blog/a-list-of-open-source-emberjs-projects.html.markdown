@@ -38,4 +38,14 @@ The dashboard for the Aptible PaaS. This project serves as a good example for or
 Another website for finding addons for Ember-CLI.  
 [View Source](https://github.com/gcollazo/ember-cli-addon-search)
 
+**[Ember Twiddle](http://ember-twiddle.com)** - *Thanks [Gaurav](https://github.com/Gaurav0)!*  
+A JSFiddle type web editor for creating Ember-CLI style code.  
+[View Source](https://github.com/ember-cli/ember-twiddle)  
+
+**[HospitalRun](http://hospitalrun.io)**  
+Open source software for developing world hospitals. The cool thing about this
+is that it's an offline-first application using PouchDB.  
+[View Source](https://github.com/HospitalRun/hospitalrun-frontend)  
+
+
 **Have suggestions for another open-source project to add? Please [open an issue](https://github.com/iheanyi/iheanyi.github.io/issues/new) on this repo!**
