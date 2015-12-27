@@ -1407,7 +1407,7 @@ button:focus {outline:0;}
 .landing-post {
   max-height: 400px;
   text-align: left;
-
+  overflow-y: hidden;
   .post-date {
     padding: 4px 0;
   }
