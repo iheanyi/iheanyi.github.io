@@ -47,7 +47,7 @@
   <div class="container post-area">
         <div class="row">
           <div class="header-content">
-            <span class="project-title actual-post-title">Imbalanced Data Analyzer</span>
+            <h1 class="project-title actual-post-title">Imbalanced Data Analyzer</h1>
 
             <p class="project-description-text">Automated analyses of large sets of imbalanced data.</p>
           </div>
@@ -69,14 +69,14 @@
 
 <h5>Description</h5>
 
-<p>During my final semester of college, I took a course in Data Mining. The professor, <a href="http://nd.edu/~chawla">Nitesh Chawla</a> is also my Research Advisor and Director at <a href="http://icensa.com/">iCeNSA</a>. For the class, he stated that my group and I could continue my research project, where Professor Chawla wanted a prototype for a <em>one-stop shop</em> web framework for automated classification of large sets of imbalanced data.</p>
+<p>During my final semester of college, I took a course in Data Mining. The professor, <a target="_blank" href="http://nd.edu/~chawla">Nitesh Chawla</a> is also my Research Advisor and Director at <a target="_blank" href="http://icensa.com/">iCeNSA</a>. For the class, he stated that my group and I could continue my research project, where Professor Chawla wanted a prototype for a <em>one-stop shop</em> web framework for automated classification of large sets of imbalanced data.</p>
 
-<p>Since I was the only member of our team familiar with web development and also the research, I did a fair amount of the programming for this project. Thinking from a framework perspective, it made the most sense to use Django as our framework so we could utilize the various scientific and mathematical libraries that Python provides, more specifically <a href="http://pandas.pydata.org/">Pandas</a> and <a href="http://scikit-learn.org/stable/">Scikit-Learn</a>. For building the API, we also decided to use <a href="http://www.django-rest-framework.org/">Django Rest Framework</a>. From Django&rsquo;s built-in admin panel, we could handle the upload and storage of dataset files to test our application on.</p>
+<p>Since I was the only member of our team familiar with web development and also the research, I did a fair amount of the programming for this project. Thinking from a framework perspective, it made the most sense to use Django as our framework so we could utilize the various scientific and mathematical libraries that Python provides, more specifically <a target="_blank" href="http://pandas.pydata.org/">Pandas</a> and <a target="_blank" href="http://scikit-learn.org/stable/">Scikit-Learn</a>. For building the API, we also decided to use <a target="_blank" href="http://www.django-rest-framework.org/">Django Rest Framework</a>. From Django&rsquo;s built-in admin panel, we could handle the upload and storage of dataset files to test our application on.</p>
 
 <p><img title="Imbalanced Dataset Dashboard" alt="Picture of the Dashboard View" src="../../images/imbalanceddata/ImbalancedPicture.jpg" />
 <em>The dashboard showing the results of each data analysis</em></p>
 
-<p>Whenever a user creates an analysis from the front-end application, the analysis is stored in the back-end and then processed in a background <a href="http://celery.readthedocs.org">Celery</a> task, executing the selected classifier. After the Celery task is finished processing, the accuracy, precision, and f1 score, in addition to the support are saved into the database. Additionally, PNGs are created of the precision graphs and ROC curves and also saved, sending these back to the front-end. In the end, the project served as a successful proof-of-concept and starting point for the one-stop shop.</p>
+<p>Whenever a user creates an analysis from the front-end application, the analysis is stored in the back-end and then processed in a background <a target="_blank" href="http://celery.readthedocs.org">Celery</a> task, executing the selected classifier. After the Celery task is finished processing, the accuracy, precision, and f1 score, in addition to the support are saved into the database. Additionally, PNGs are created of the precision graphs and ROC curves and also saved, sending these back to the front-end. In the end, the project served as a successful proof-of-concept and starting point for the one-stop shop.</p>
 
 
             <hr>
