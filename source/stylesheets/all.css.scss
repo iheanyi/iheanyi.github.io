@@ -152,7 +152,7 @@ html, body {
   -webkit-transition: all 0.5s ease-in;
   -moz-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
-  float: right;
+  //float: right;
 
   &.background-active {
     background: transparent;
@@ -183,7 +183,7 @@ html, body {
   -moz-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
   @include transform-origin(right top);
-  float: right;
+  //float: right;
   &.background-active {
     z-index: 9999;
     background-color: rgba(192,93,95,0.75);
@@ -395,6 +395,7 @@ html, body {
   @include media($desktop) {
     background-position: center;
     background-size: cover;
+    padding-top: 0;
   }
 }
 
@@ -799,9 +800,11 @@ figure.effect-oscar {
   background-size: cover;
   background-position: center center;
 }
+
 .page-paragraph-text {
   font-family: "Gentium Basic", Georgia, serif;
   font-size: 1.25em;
+  font-weight: 500;
 }
 
 .projects-area {
@@ -827,6 +830,11 @@ figure.effect-oscar {
   @include media($desktop) {
 
   }
+}
+
+.serif {
+  font-family: "Gentium Basic", Georgia, serif;
+  font-size: 1.25em;
 }
 
 .contact-container {
@@ -967,14 +975,20 @@ figure.effect-oscar {
   color: #4a4a4a;
 }
 .header-content {
+  @include pad();
   position: relative;
   display: block;
   width: 100%;
-  margin-top: 40px;
-  padding: 40px 0;
-  text-align: center;
+  padding-top: $navigation-height * 1.5;
+  text-align: left;
   color: #4A4A4A;
   margin: 0 auto;
+
+  @include media($desktop) {
+    @include pad(0);
+    padding-top: $navigation-height / 2;
+    text-align: center;
+  }
 }
 
 .span-3 {
@@ -983,14 +997,15 @@ figure.effect-oscar {
 .project-title {
   display: block;
   font-weight: 600;
-  font-size: 2em;
-  padding-top: 40px;
+  //font-size: 2em;
+  //padding-top: 40px;
   //padding: 20px 0;
-  text-align: center;
+  text-align: left;
   width: 100%;
 
   @include media($desktop) {
-    font-size: 2.25em;
+    //font-size: 2.25em;
+    text-align: center;
   }
 }
 
@@ -1049,8 +1064,12 @@ p {
 }
 
 .post-container {
-  padding-top: 80px;
+  padding-top: $navigation-height; 
   display: block;
+
+  @include media($desktop) {
+    padding-top: $navigation-height / 2;
+  }
 }
 .post-content-area {
   @include pad();
@@ -1084,6 +1103,7 @@ p {
 .post-heading {
 /*   text-align: center;
  */}
+
 .post-title {
   $color: #4a4a4a;
   font-size: 1.5em;
@@ -1096,9 +1116,10 @@ p {
 
 .actual-post-title {
    display: block;
-  font-size: 2.5em;
+  //font-size: 2.5em;
   font-weight: 700;
-  margin-top: 30px;
+  color: #4a4a4a;
+  //margin-top: 30px;
 }
 
 pre {
@@ -1276,7 +1297,6 @@ pre.lineno{
   font-size: 1.25em;
   font-weight: 500;
   font-family: "Gentium Basic", Georgia, serif;
-  text-align: center;
 }
 .emphasis {
   font-weight: 700;
@@ -1434,4 +1454,21 @@ button:focus {outline:0;}
 
 .highlight {
   margin-bottom: 16px;
+}
+
+.tc {
+  text-align: center;
+}
+
+.interviews-area {
+  padding-bottom: 24px;
+}
+
+.footnotes {
+  font-size: 0.75em;
+}
+
+.share-buttons {
+  display: block;
+  margin-top: 16px;
 }

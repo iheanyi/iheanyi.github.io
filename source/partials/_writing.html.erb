@@ -9,7 +9,7 @@
 
           <% blog("blog").articles[0..2].each do |article| %>
               <div class="landing-post pad">
-                <span class="landing-post-title"><%= link_to article.title, article, :relative => true %></span>
+                <h4 class="post-title landing-post-title"><%= link_to article.title, article, :relative => true %></h4>
 
                 <span class="post-date"><%= article.date.strftime('%B %e, %Y') %></span>
 

@@ -103,8 +103,8 @@ page "CNAME", :layout => false
 set :relative_links, true
 
 
-set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true
+#set :markdown_engine, :redcarpet
+#set :markdown, :fenced_code_blocks => true, :smartypants => true, :link_attributes => {target: "_blank"}
 
 activate :directory_indexes
 page "/sitemap.xml", layout: false
@@ -132,7 +132,7 @@ configure :build do
 end
 
 set :markdown_engine, :redcarpet
-set :markdown,  :fenced_code_blocks => true, :autolink => true, :smartypants => true
+set :markdown,  :fenced_code_blocks => true, :autolink => true, :smartypants => true, :link_attributes => {target: "_blank"}, :prettify => true, :footnotes => true
 
 activate :syntax, :line_numbers => false #, :inline_theme => "github"
 
