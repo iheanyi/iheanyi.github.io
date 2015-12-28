@@ -638,4 +638,4 @@ the tutorial [here](https://github.com/iheanyi/django-react-redux-users-tutorial
 [^2]: Django Rest Framework.
 [^3]: To me, 32 characters is good enough of a max length for usernames. Feel free to use another length.
 [^4]: http://www.django-rest-framework.org/api-guide/authentication/#tokenauthentication
-[^5]: The official Django Rest Framework documents suggests to use [signals](http://www.django-rest-framework.org/api-guide/authentication/#generating-tokens) for creating tokens, but honestly I am not a fan of them because they remind me of callbacks and can be difficult to debug, so we're not going to deal with that. 
+[^5]: The official Django Rest Framework documents suggests to use [signals](http://www.django-rest-framework.org/api-guide/authentication/#generating-tokens) for creating tokens, but they aren't my preference. 
