@@ -1,21 +1,20 @@
 ---
-title: Reflecting on 2015
+title: Reflections on 2015
 date: 2015-12-30
 tags: 
-published: false
 ---
 
-2015 has been a pretty good year nonetheless and I think it is always good for
-one to reflect on their past year and see where they grew, where they fell short, and start thinking about changes for the next year. So, it's my turn to do the same.
+The year 2015 has been a pretty good year nonetheless and I think it is always good for
+one to reflect on their past year and see where they grew, where they fell short, and to start thinking about changes for the next year.
 
 ### So what happened?  
 Here are my highlights of 2015.  
 
-**Facebook Page Unliker reached #1 on ProductHunt.**  
+**[Facebook Page Unliker](http://pageunliker.com) reached #1 on ProductHunt.**  
 The first major milestone I had was having one of my weekend side
 projects, [Facebook Page Unliker](http://pageunliker.com), reach #1 on
 [ProductHunt](https://www.producthunt.com/tech/facebook-page-unliker). I wrote a
-[Medium post](https://medium.com/@kwuchu/lessons-learned-from-hacker-news-and-product-hunt-2134266bbab8#.j059vfqul) on the lessons learned from this achievement, but long story short, I realized that even if an application itself is not polished, people will still use it and enjoy it if it solves a real problem.
+[Medium post](https://medium.com/@kwuchu/lessons-learned-from-hacker-news-and-product-hunt-2134266bbab8#.j059vfqul) on the lessons learned from this achievement, and the main thing I learned is that even if an application itself is not polished, people will still use it and enjoy it if it solves a real problem.
 
 **Moved to Austin, Texas and started my first job.**  
 In February, I relocated to Austin and started working at IBM Watson. The most
@@ -25,8 +24,8 @@ difference between my coworkers and I made hanging with coworkers outside of
 worker kind of difficult. Luckily, I was able to meet people at local meetups,
 so if you move to a new city, do not hesitate to use [Meetup](http://meetup.com)! 
 
-**Helped launch Chef Watson.**  
-In the workplace, I was part of the team that helped take [Chef Watson](https://www.ibmchefwatson.com) out of beta and into GA as a full-stack developer. Working on Chef Watson gave me an idea of how to work on a team and also helped improve my communication skills since the majority of the team is distributed remotely. I have since moved onto a new project, but I have to say that working on Chef Watson was a blast.
+**Helped launch [Chef Watson](https://www.ibmchefwatson.com).**  
+In the workplace, I was part of the team that helped take [Chef Watson](https://www.ibmchefwatson.com) out of beta and into GA as a full-stack developer. Working on Chef Watson taught me how to work better on a team and also helped improve my communication skills since the majority of the team is distributed remotely. I have since moved onto a new project, but I have to say that working on Chef Watson was a blast.
 
 **Spoke at the FrontPorch and ThunderPlains Conferences.**  
 I was lucky enough to have the opportunity to speak at both [FrontPorch](http://frontporch.io) and [ThunderPlains](thunderplainsconf.com) about Ember.js and Ember-CLI. While I was extremely nervous speaking at FrontPorch, I still think that both talks went extremely well. It definitely gets easier to speak after your first time.
