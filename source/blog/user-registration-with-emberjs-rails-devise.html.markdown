@@ -2,6 +2,7 @@
 title: User Registration with Ember.js, Rails, and Devise
 date: 2015-12-24 19:21 UTC
 tags: emberjs, rails, devise, web dev, ruby on rails
+published: false
 ---
 
 
