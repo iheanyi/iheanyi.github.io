@@ -21,10 +21,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://iheanyi.com/blog/user-registration-with-emberjs-rails-devise</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>http://iheanyi.com/blog</loc>
     <priority>0.7</priority>
   </url>
@@ -34,6 +30,10 @@
   </url>
   <url>
     <loc>http://iheanyi.com/index.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://iheanyi.com/media</loc>
     <priority>0.7</priority>
   </url>
   <url>
