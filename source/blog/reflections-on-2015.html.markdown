@@ -1,7 +1,7 @@
 ---
 title: Reflections on 2015
-date: 2015-12-30
-tags: 
+date: 2015-12-29
+tags: personal, reflections, lifestyle
 ---
 
 The year 2015 has been a pretty good year nonetheless and I think it is always good for
