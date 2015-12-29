@@ -35,10 +35,10 @@ INSTALLED_APPS = (
 )
 ```
 
-Let's go ahead and sync our database.
+Let's go ahead and migrate our database so everything is initially created.
 
 ```
-python manage.py syncdb
+python manage.py migrate
 ```
 
 Now we're ready to start coding up the actual API logic. Let's start with user registration.
