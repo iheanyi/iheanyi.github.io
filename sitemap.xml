@@ -21,6 +21,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://iheanyi.com/blog/reflections-on-2015</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://iheanyi.com/blog</loc>
     <priority>0.7</priority>
   </url>
