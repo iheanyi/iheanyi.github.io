@@ -26,14 +26,14 @@ breakfast tacos and Torchy's. Do they have breakfast tacos in New York City?
 
 ##### Do you plan on moving back to Austin?  
 
-Perhaps, I just know that I can't buy a house in New York City unless I went the
+Perhaps, I just know that I can't buy a house in New York City unless I win the
 lottery, so I'm gonna have to move somewhere where I can. If Austin fits that
 bill, then perhaps I'll move back. We'll see. :P
 
 ##### What borough/neighborhood are you going to live in?  
-So I'm going to be living in Chinatown and SoHo for a couple of months, before
+I'm going to be living in Chinatown and SoHo for a couple of months, before
 moving to Brooklyn. I haven't figured out which neighborhood in Brooklyn yet,
-but so far BedStuy and Flatbush are on the radar. If you have any other
+but so far Bed-Stuy and Flatbush are on the radar. If you have any other
 recommendations for neighborhoods, let me know!
 
 ##### Are you starting your new job immediately?  
