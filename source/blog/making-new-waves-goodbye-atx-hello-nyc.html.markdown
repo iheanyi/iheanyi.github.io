@@ -1,7 +1,6 @@
 ---
 title: "Making New Waves – Goodbye ATX, Hello NYC"
 date: 2016-02-16
-published: false
 tags: personal, new york city, digitalocean
 ---
 
