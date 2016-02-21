@@ -2,6 +2,8 @@
 title: "Making New Waves – Goodbye ATX, Hello NYC"
 date: 2016-02-16
 tags: personal, new york city, digitalocean
+description: Saying goodbye to Austin, Texas and moving to the Big Apple for the
+next chapter!
 ---
 
 A year ago, I started working at IBM Watson on the Watson Life team. I've had the privilege of working on innovative projects such as [IBM Chef Watson](http://ibmchefwatson.com) and others in the works. While I've had a year filled with personal growth and learning the ins and outs of a large corporation, the time has come for the next chapter in my career. In March, I will be moving to New York City to work at [DigitalOcean](http://digitalocean.com) on the Community Engineering team. I'm going to answer some of the questions I've been frequently asked below.
